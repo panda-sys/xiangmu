@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dierjieduan/css/font-awesome.css">
+    <style>
+        body{
+            height:auto;
+        }
+       *{
+           padding:0px;
+           margin:0px;
+           -webkit-box-sizing: border-box;
+           box-sizing:border-box;
+       }
+       .money a{
+           color:#969696;
+           text-decoration:none;
+       }
+        .user{
+        width:100%;
+        height:55px;
+        background:#F4C138;
+        z-index: 1000;
+        position:fixed;
+        top:0px;
+        left:0px;
+        color:#333;
+        font-size:33px;
+        padding-top:15px;
+        display:none;
+    }
+    .userBox{
+        width:100%;
+        text-align:center;
+    }
+    .user-img{
+        width:6.3rem;
+        position:absolute;
+        top:14px;
+        right:0px;
+    }
+    .user img{
+        width:2rem;
+        float:left;
+    }
+    .user img:last-of-type{
+    margin-left:18%;
+    }
+    /* center */
+    .center{
+           position:absolute;
+           top:-55px;
+           left:0px;
+           right:0px;
+           margin-top:55px;
+           background: #ffffff;
+       }
+       .content{
+           width:100%;
+           height:1000px;
+           border-radius:15px 15px 0 0;
+           z-index: 120;
+           margin-top:32%;
+       }
+       .navigation{
+           background:#F4C138;
+           position:absolute;
+           top:0px;
+           left:0px;
+           right:0px;
+           width:100%;
+           height:30%;
+           z-index: 30;
+           padding-bottom:5%;
+       }
+       .navi-box{
+           width:95%;
+           height:20%;
+           margin-left:5%;
+           margin-top:7%;
+           display:flex;
+       }
+       .navi-img{
+           height:100%;
+           flex:1
+       }
+       .navi-img img{
+           width:4.2rem;
+           border-radius:50%;
+       }
+       .navi-box div{
+           float:left;
+       }
+       .navi-p {
+           height:100%;
+           color:#333;
+           font-size:35px;
+           padding-top:23px;
+           margin-left:2%;
+           flex:3
+       }
+       .navi-setting{
+           height:100%;
+           flex: 2;
+           display:flex;
+       }
+       .navi-setting div{
+           flex:1;
+           height:100%;
+           float:left;
+           margin-left:10px;
+       }
+       .navi-setting img{
+           width:2rem;
+           padding-top:20px;
+       }
+       .navi-setting div:first-of-type{
+           margin-left:30%;
+       }
+       .menu{
+           width:100%;
+           height:10%;
+           display:flex;
+           background:#F4C138;
+           padding-bottom:20%;
+           padding-top:10%
+       }
+       .menu div{
+           float:left;
+           flex:1;
+           height:50%;
+           text-align:center;
+           margin-left:3.8%;
+       }
+       .menu div img{
+           width:2.3rem;
+       }
+       .Box{
+           position: relative;
+           top:10%;
+           left:0px;
+           right:0px;
+           bottom:0px;
+           width: 100%;
+           z-index: 300;
+           right:0px;
+           background:#fff;
+           border-radius:10px 10px 0 0 ;
+           padding:5%;
+       }
+       .money{
+           width:100%;
+           height:40px;
+           display:flex;
+         
+       }
+       .money div{
+           height:40px;
+           float:left;
+       }
+       .money a{
+           text-decoration:none;
+           color:#333;
+       }
+       .money div:first-of-type{
+           flex:3;
+           font-size:23px;
+           color:#333;
+           
+       }
+       .money div:last-of-type{
+           flex:1;
+           font-size:15px;
+           color:#969696;
+           margin-left:5%;
+       }
+       .money div span{
+           font-size:20px;
+           margin-left:20%;
+       }
+       .moneyBox{
+           width:100%;
+           height:120px;
+           margin-top:20px;
+           display:flex;
+           border-bottom: 1px solid #eee;
+       }
+       .moneyBox div{
+           flex:1;
+           text-align:center;
+           color:#333;
+           font-size:40px;
+           margin-left:11%;
+       }
+       .moneyBox div:first-of-type{
+           margin-left:0px !important;
+       }
+       .moneyBox div span{
+           font-size:15px;
+           margin:0  0 2% 2%;
+       }
+       .moneyBox div p{
+           font-size:18px;
+           margin:8%  0 0 0;
+           color:#333;
+           font-weight:5px;
+       }
+       .moneyBox div p:last-of-type{
+           color:#969696;
+           font-size:14px;
+           margin-top:5% ;
+       }
+       .play{
+           width:100%;
+           height:85px;
+           border:1px solid #eee;
+           margin-top:80px;
+           border-radius: 10px;
+           overflow: hidden;
+           padding: 5%;
+       }
+       .play img{
+           border-radius:5%;
+           display:none;
+       }
+       .play-img:first-of-type{
+           display: block;
+       }
+       .play ul{
+           position:absolute;
+           left:150px;
+           top:290px;
+       }
+       .play li{
+           list-style:none;
+           border:1px solid #ccc;
+           height:5px;
+           width:20px;
+           float:left;
+           margin-left:10px;
+       }
+       .tool{
+           color:#333;
+           font-size:34px;
+           width:100%;
+           height:30px;
+           border-top:1px solid #eee;
+           margin-top:20px;
+           padding-top:6%;
+           padding: 5%;
+       }
+       .toolBox{
+           width:100%;
+           height:600px;
+           padding: 5%;
+       }
+       .toolBox-one{
+           width:100%;
+           height:80px;
+           display:flex;
+           margin-bottom:20px;
+           margin-top:10%;
+       }
+       .toolBox-one div{
+           flex:1;
+           margin-right:20px;
+           text-align:center;
+       }
+       .toolBox-one div:last-of-type{
+           margin-right:0px;
+       }
+       .toolBox-one img{
+           width:50%;
+       }
+       .toolBox-one p{
+           color:#111;
+           font-size:13px;
+           margin-top:5%;
+       }
+       .bottom{
+           position:fixed;
+           bottom:0px;
+           left:0px;
+           width:100%;
+           height:70px;
+           z-index: 200;
+           background:#fff;
+           padding-left:10%;
+           padding-top:2%;
+           border-top:1px solid #eee;
+       }
+       .bottom img{
+           width:80%;
+           margin-right:15%;
+        }
+        .bottom img:last-of-type{
+            margin-right:9%;
+        }
+        .bottom div div{
+            float:left;
+            width:10%;
+            height:100%;
+            margin-right:16.5%;
+        }
+        .bottom div div:last-of-type{
+            margin-right:4%;
+        }
+        .bottom div div p{
+            color:#111;
+            margin-top:5%;
+        }
+</style>
+</head>
+<body>
+    <div id="boss">
+        <div class="user"><!-- TOP -->
+            <div class="userBox">
+                <p><h6>dSR340109963</h6></p>
+            </div>
+            <div class="user-img">
+                <div>
+                    <img width="100%" src="/dierjieduan/images/shezhi.png">  
+                </div>
+                <div>
+                    <img width="100%" src="/dierjieduan/images/erji.png">
+                </div>
+            </div>
+        </div><!-- TOP结束 -->
+        <div class="center">
+            <div class="content">
+                <div class="navigation"><!-- 导航栏 -->
+                    <div class="navi-box">
+                        <div class="navi-img">
+                            <img src="//s0.meituan.net/bs/fe-web-meituan/e350c4a/img/avatar.jpg">
+                        </div>
+                        <div class="navi-p">
+                            <P><h6>dSR340109963</h6></P>
+                        </div>
+                        <div class="navi-setting">
+                            <div>
+                                <img width="100%" src="/dierjieduan/images/shezhi.png">  
+                            </div>
+                            <div>
+                                <img width="100%" src="/dierjieduan/images/erji.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu"><!-- 菜单栏 -->
+                        <div>
+                            <img src="/dierjieduan/images/shoucang.png">
+                            <p>收藏</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/pingjia.png">
+                            <p>评价</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/hongbao.png">
+                            <p>红包/卡券</p>
+                        </div>
+                        <div class="information">
+                            <img src="/dierjieduan/images/xiaoxi.png">
+                            <p>消息</p>
+                        </div>
+                    </div><!-- 菜单栏结束 -->
+                </div><!-- 导航栏结束 -->
+                <div class="Box"><!-- 钱包 -->
+                    <div class="money"><!-- money -->
+                        <div><strong>我的钱包</strong></div>
+                        <div class="money-one">进入钱包<span><i class="fa fa-angle-right"></i></span></div>
+                </div><!-- money结束 -->
+                <div class="moneyBox"><!--moneyBox -->
+                    <div>
+                        <h6>10<span>万</span></h6>
+                        <p>美团借钱</p>
+                        <p>最高额度(元)</p>
+                    </div>
+                    <div>
+                        <div>
+                            <h6>0.00</h6>
+                            <p>资产</p>
+                            <p>持有额度(元)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h6>127<span>元</span></h6>
+                            <p>美食享优惠</p>
+                            <p>最高随机减</p>
+                        </div>
+                    </div><!-- 钱包 -->
+                </div> <!--moneyBox结束  -->
+                </div>
+                <div class="play"><!-- play -->
+                    <img class="play-img" width="90%"src="/dierjieduan/images/1.jpg">
+                    <img class="play-img" width="100%" src="/dierjieduan/images/2.jpg">
+                    <img class="play-img" width="110%" src="/dierjieduan/images/3.jpg">
+                    <ul>
+                        <li class="playlis"></li>
+                        <li class="playlis"></li>
+                        <li class="playlis"></li>
+                    </ul>
+                </div><!-- play结束 -->
+                <div class="tool"><!-- tool -->
+                    <h6>推荐工具</h6>
+                </div><!-- tool结束 -->
+                <div class="toolBox"><!-- toolBox -->
+                    <div class="toolBox-one">
+                        <div>
+                            <img src="/dierjieduan/images/liwu.png">
+                            <p>邀请有礼</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/chongzhi.png">
+                            <p>手机充值</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/huochepiao.png">
+                            <p>火车票/机票</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/shui.png">
+                            <p>新个税计算</p>
+                        </div>
+                    </div>
+                    <div class="toolBox-one">
+                        <div>
+                            <img src="/dierjieduan/images/tianqi.png">
+                            <p>墨迹天气</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/vip.png">
+                            <p>会员中心</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/gongyi.png">
+                            <p>美团公益</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/shanfu.png">
+                            <p>闪付</p>
+                        </div>
+                    </div>
+                    <div class="toolBox-one">
+                        <div>
+                            <img src="/dierjieduan/images/ka.png">
+                            <p>免流用美团</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/fapiao.png">
+                            <p>发票助手</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/hezuo.png">
+                            <p>我要合作</p>
+                        </div>
+                        <div>
+                            <img src="/dierjieduan/images/mei.png">
+                            <p>关于美团</p>
+                        </div>
+                    </div>
+                </div><!-- toolBox -->
+            </div><!-- content结束 -->
+        </div>
+        <div class="bottom"><!-- 底部 -->
+            <div>
+                <diV>
+                    <img src="/dierjieduan/images/shouye.png">
+                    <p>首页</p>
+                </diV>
+                <diV>
+                    <img src="/dierjieduan/images/faxian.png"> 
+                    <p>发现</p>
+                </diV>
+                <div>
+                    <img src="/dierjieduan/images/dingdan.png">
+                    <p>订单</p>
+                </div>
+                <div>
+                    <img src="/dierjieduan/images/mine.png">
+                    <p>我的</p>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <script src="/dierjieduan/js/swiper.js"></script>
+    <script src="/dierjieduan/js/iscroll.js"></script>
+    <script>
+         var imgs=document.getElementsByClassName('play-img')
+        var lis=document.getElementsByClassName('playlis')
+        var num=0
+        for(var i=0;i<lis.length;i++){
+            lis[i].index=i
+            lis[i].onclick=function(){
+                imgs[num].style.display='none'
+                lis[num].style.background='none'
+                imgs[this.index].style.display='block'
+                this.style.background='#ccc'
+                num=this.index
+            }
+        }
+        setInterval(function(){
+            imgs[num].style.display='none'
+            lis[num].style.background='none'
+            num++
+            if(num==lis.length){
+                num=0;
+            }
+            imgs[num].style.display='block'
+            lis[num].style.background='#ccc'
+        },1000)
+        // user
+        var user=document.getElementsByClassName('user')[0]
+        window.onscroll=function(){
+            var aaa=document.documentElement.scrollTop
+            if(aaa>30){
+                user.style.display='block'
+            }else{
+                user.style.display='none'
+            }
+        }
+        // 跳转
+        var money=document.getElementsByClassName('money')[0]
+        var information=document.getElementsByClassName('information')[0]
+        money.onclick=function(){
+          window.location.href='money.html'
+        }
+        information.onclick=function(){
+        window.location.href='information.html'
+        }
+    </script>
+</body>
+</html>
