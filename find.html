@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../xiangmu/dierjieduan/css/swiper.css">
+    <style>
+     *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        #box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* border: 1px solid red; */
+            overflow: hidden;
+        }
+       #top{
+            height:60px;
+            position: fixed;
+            background: #FFCA00;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid #1AC916;
+       }
+       #top p{
+            font-size:20px;
+            margin-top:17px;
+            margin-left:45%;
+       }
+       #too{
+            height:60px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* border-top: 1px solid red; */
+            background: white;
+            /* display:flex;
+            justify-content:space-around; */
+       }
+       
+       .dong{
+            position:fixed;
+            left: 0;
+            right: 0;
+            top: 60px;
+            bottom: 0px;
+            background: #fafafa;
+            overflow: hidden;
+        }
+        #top{
+            line-height: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+      
+        .content{
+            padding: 0 15px;
+        }
+        .scrollBarItem{
+            width: 32em;
+        }
+        .scrollBarItem ul{
+            height:42px;
+        }
+        .scrollBarItem ul li{
+            height: 36px;
+            width: 4.2em;
+            float: left;
+            line-height: 36px; 
+            text-align: center;
+            font-size:14px;
+        }
+        #diyi{
+            border-bottom:2px solid orange;
+        }
+       .zhong{
+           width:100%;
+           height:1650px;
+           margin-top:10px;
+           /* border:solid 2px red; */
+           overflow:hidden;
+           /* display:flex; */
+             /* display:flex; */
+        /* justify-content:space-around; */
+       }
+       .wrapper{
+        left:0;
+        right:0;
+        top:100px;
+        bottom:0;
+        position:absolute;
+        /* border:solid; */
+        overflow:hidden;
+      
+       }
+       .dakuang{
+             width:100%;
+             height:1700px;
+             /* margin-top:20px; */
+         }
+         .zuo{
+             width:45.5%;
+             height:1700px;
+             /* border:2px red solid; */
+             margin-left:3%;
+             float:left;
+         }
+         .you{
+             width:45.5%;
+             height:1700px;
+             /* border:2px red solid; */
+             margin-left:3%;
+             float:left;
+         }
+       .one{
+           margin-bottom:2.5%;
+       }
+       .zuoyi{
+           float:left;
+           width:100%;
+           height:310px;
+           /* border:2px solid red; */
+           margin-bottom:2.5%;
+           border-radius:30px;
+       }
+       .youyi{
+           float:left;
+           width:100%;
+           height:300px;
+           /* border:2px solid red; */
+           margin-bottom:2.5%;
+           border-radius:10px!important;
+       } 
+       .yii .shi{
+           width:100%;
+           height:240px;
+           /* border:solid; */
+       }
+       .yii .xiang{
+           position:absolute;
+           top:220px;
+           left:135px;
+           height:20px;
+       }
+      .yiii p{
+            font-size:14px;
+            margin-left:4%;
+            }
+      .yiii .zuozhe{
+          height:5%;
+      }
+      .err img{
+           width:100%;
+           height:230px;
+           /* border:solid; */
+       }
+      .errr p{
+            font-size:14px;
+            margin-left:4%;
+            }
+      .errr img{
+          height:5%;
+      }
+      #praise{
+          position:absolute;
+          top:285px;
+          left:34%;
+          height:20px;
+      }
+     #praise-txt{
+        position:absolute;
+          top:285px;
+          left:40%;
+          height:20px;
+      }
+      #parise:hover{
+          color:red;
+      }
+      /* .prais{
+          position:absolute;
+          top:285px;
+          left:120px;
+          height:20px;
+      }
+      .praise-tx{
+        position:absolute;
+          top:285px;
+          left:148px;
+          height:20px;
+      }
+      .paris:hover{
+          color:red;
+      } */
+      /*点赞图标放大动画开始*/
+@keyframes myfirst
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+/*点赞图标放大动画结束*/
+/*点赞数量加减动画开始*/
+@keyframes mypraise
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+
+@-moz-keyframes mypraise /* Firefox */
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+
+@-webkit-keyframes mypraise /* Safari 和 Chrome */
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+
+@-o-keyframes mypraise /* Opera */
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+.add-num{
+    display:none;
+}
+.yincang{
+    width:336px;
+    height:110px;
+    position:absolute;
+    background:white;
+    top:240px;
+    border-radius:10px;
+}
+.liyou{
+    color:black;
+    font-size:16px;
+    margin-left:75px;
+    margin-top:10px;
+}
+.hei{
+    margin-top:13px;
+}
+.yincang span{
+    width:90px;
+    height:60px;
+    border:rgb(8, 7, 7) solid 1px;
+    border-radius:12px;
+    
+}
+.lahei{
+    margin-left:95px;
+    color:rgb(110, 108, 108);
+    font-size:10px;
+    padding:5px 5px;
+    
+}
+.zhiliang{
+    margin-left:10px;
+    color:rgb(110, 108, 108);
+    font-size:10px;
+    padding:5px 5px;
+}
+.xingqu{
+      margin-top:17px;
+      margin-left:125px;
+}
+.yincang{
+    display:none;
+}
+#too .tooyi{
+  /* width:100%; */
+  height:35px;
+  /* border:1px solid red; */
+    display:flex;
+    justify-content:space-around;
+
+}
+#too .tooer{
+    /* width:100%; */
+  height:25px;
+  /* border:1px solid red; */
+  display:flex;
+    justify-content:space-around;
+}
+
+.tooyi img{
+    width:10%;
+    height:80%;
+
+    margin-top:1%;
+}
+
+
+.tooer p{
+    font-size:10px;
+}
+
+     
+     
+
+
+       
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="top"><p>发现</p></div>
+            <div class="dong">
+              <div class="scrollBarItem">
+                        <ul>
+                            <li id="diyi">推荐</li>
+                            <li>旅行</li>
+                            <li>结婚</li>
+                            <li>丽人</li>
+                            <li>电影</li>
+                            <li>购物</li>
+                            <li>教培</li>
+                            <li>家装</li>
+                        </ul>
+                </div>
+            </div>
+            <div class="wrapper">
+            <div class="zhong">
+            <ul>
+                <li>
+                <div class="dakuang">
+                <div class="zuo">
+                        <div class="zuoyi">
+                                <div class="yii" >
+                                <a href="faxian.html"> <img  class="shi"    width=100%   src="dierjieduan/发现image/yil.jpg" alt="" > </a>
+                                <img  class="xiang"  width=5%  src="dierjieduan/发现image/xiangxial.png" alt="">
+                                </div>
+                                <div class="yiii">
+                                    <p>不腻！地址在交通街的老婆饼屋</p>
+                                    <img  class="zuozhe" width=60% src="dierjieduan/发现image/hanchil.png"alt="">
+                                    <img id="praise"  width=5% src="dierjieduan/发现image/zanl.png" id="praise-img">
+                                    <span id="praise-txt">0</span>
+                                    <!-- <span id="add-num"><em>+1</em></span> -->
+                                </div>
+                                <div class="yincang">
+                                   <p class="liyou"><strong>可选理由，减少相关推荐</strong></p>
+                                   <p class="hei"><span class="lahei">拉黑作者</span><span class="zhiliang">内容质量差</span></p>
+                                   <p class="xingqu">不感兴趣</p>
+                                </div>         
+                        </div>
+                        <div class="zuoyi">
+                                <div class="yii">
+                                <img class="shi" width=100% src="dierjieduan/发现image/erl.jpg" alt="">
+                                </div>
+                                <div class="yiii">
+                                        <p>学校南门的“鲍师傅”好吃不贵</p>
+                                    <img  class="zuozhe" width=50%  src="dierjieduan/发现image/errl.png"alt="">
+                                    <!-- <img class="prais"  width=5% src="dierjieduan/发现image/zan.png" id="praise-img">
+                                    <span class="praise-tx">0</span> -->
+                                </div>
+                        </div>
+                        <div class="zuoyi">
+                                <div class="yii">
+                                <img class="shi" width=100% src="dierjieduan/发现image/sanl.jpg" alt="">
+                                </div>
+                                <div class="yiii">
+                                        <p>妈妈买真是暴力...买这么多</p>
+                                    <img width=40%  src="dierjieduan/发现image/sannl.png"alt="">
+                                </div>
+                        </div>
+                        <div class="zuoyi">
+                                <div class="yii">
+                                <img class="shi" width=100% src="dierjieduan/发现image/sil.jpg" alt="">
+                                </div>
+                                <div class="yiii">
+                                        <p>没错没错，你没看错，大猪鼻子，你也</p>
+                                    <img width=50%  src="dierjieduan/发现image/siil.png"alt="">
+                                </div>
+                        </div>
+                        <div class="zuoyi">
+                            <div class="yii">
+                            <img class="shi" width=100% src="dierjieduan/发现image/wul.jpg" alt="">
+                            </div>
+                            <div class="yiii">
+                                    <p>两块钱一个的蛋肉堡，百吃不腻</p>
+                                <img  width=40%  src="dierjieduan/发现image/wuul.png"alt="">
+                            </div>
+                        </div>
+                        
+                </div>
+                <div class="you">
+                    <div class="youyi">
+                            <div class="err">
+                                    <img width=100% src="dierjieduan/发现image/liul.jpg" alt="">
+                                    </div>
+                                    <div class="errr">
+                                            <p>里面满满的红豆肉松，甜咸油润，一口</p>
+                                        <img width=50%  src="dierjieduan/发现image/liuul.png"alt="">
+                                </div>
+                    </div>
+                    <div class="youyi">
+                            <div class="err">
+                                    <img width=100% src="dierjieduan/发现image/qil.jpg" alt="">
+                                    </div>
+                                    <div class="errr">
+                                            <p>我好喜欢吃豆腐圆子，我可能上辈子就是一</p>
+                                        <img width=50%  src="dierjieduan/发现image/qiil.png"alt="">
+                                </div>
+                    </div>
+                    <div class="youyi">
+                            <div class="err">
+                                    <img width=100% src="dierjieduan/发现image/bal.jpg" alt="">
+                                    </div>
+                                    <div class="errr">
+                                            <p>童年的回忆,真是太好吃啦</p>
+                                        <img width=40%  src="dierjieduan/发现image/baal.png"alt="">
+                                </div>
+                    </div>
+                    <div class="youyi">
+                            <div class="err">
+                                    <img width=100% src="dierjieduan/发现image/jiul.jpg" alt="">
+                                    </div>
+                                    <div class="errr">
+                                            <p>在超市的小吃街发现了一家红油米线 看着</p>
+                                        <img width=40%  src="dierjieduan/发现image/jiuul.png"alt="">
+                                </div>
+                    </div>
+                    <div class="youyi">
+                            <div class="err">
+                                    <img width=100% src="dierjieduan/发现image/shil.jpg" alt="">
+                                    </div>
+                                    <div class="errr">
+                                            <p>火遍天津的小吃终于来到塘沽了</p>
+                                        <img width=30%  src="dierjieduan/发现image/shiil.png"alt="">
+                                </div>
+                    </div>
+                   
+                </div>
+            </div>
+                </li>
+           
+         </ul>
+            </div>
+            <div></div>
+    </div>
+        <div id="too">
+            <div class="tooyi">
+            <img  width=8% src="dierjieduan/发现image/shouyel.png" alt="">
+            <img width=8% src="dierjieduan/发现image/faxianl.png" alt="">
+            <img  width=8% src="dierjieduan/发现image/dingdanl.png" alt="">
+            <img  width=8% src="dierjieduan/发现image/wode (1).png" alt="">
+        </div>
+         <div class="tooer">
+            <p class="shou">首页</p>
+            <p class="fa">发现</p>
+            <p class="ding">订单</p>
+            <p class="wo">我的</p>
+        </div>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="../xiangmu/dierjieduan/js/iscroll.js"></script>
+    <script src="../xiangmu/dierjieduan/js/swiper.js"></script>
+    <script>
+        var myScroll= new IScroll('.wrapper')
+        var myScroll1 = new IScroll('.dong',{
+            scrollX: true
+        })
+        $(function() {
+    $("#praise").click(function() {
+        var praise_img = $("#praise-img");
+        var text_box = $("#add-num");
+        var praise_txt = $("#praise-txt");
+        var num = parseInt(praise_txt.text());
+        if (praise_img.attr("src") == ("")) {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' id='praise-img' class='animation' />");
+            praise_txt.removeClass("hover");
+            text_box.show().html("<em class='add-animation'>-1</em>");
+            $(".add-animation").removeClass("hover");
+            num -= 1;
+            praise_txt.text(num)
+        } else {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' id='praise-img' class='animation' />");
+            praise_txt.addClass("hover");
+            text_box.show().html("<em class='add-animation'>+1</em>");
+            $(".add-animation").addClass("hover");
+            num += 1;
+            praise_txt.text(num)
+        }
+    });
+})
+      var yincangg=document.getElementsByClassName('yincang')[0]
+      var xiangg=document.getElementsByClassName('xiang')[0]
+      xiangg.onclick=function(){
+        if(yincangg.style.display=='block'){
+            yincangg.style.display='none';
+                }
+                else{
+                    yincangg.style.display='block';    
+                }
+      }  
+
+    //   $(".shi").click(function(){
+    //       window.location.href="faxian.html"
+    //   })     
+  
+ 
+    </script>
+</body>
+</html>
