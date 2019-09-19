@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.css"> 
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .top{
+            height: 1.3rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid #FFCA00;  
+            background: #FFCA00;   
+            z-index:2;      
+        }
+        .bottombox{
+            height: 1.3rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* border-top: 1px solid red; */
+            background: #FFFFFF; 
+            z-index: 1; 
+            text-align: center;
+        }
+        .center{
+            margin-top: 1.3rem;
+            background: #F5F5F5;
+        }
+        .picture{
+            float:left;
+            width:9%;
+            margin-top:0.25rem;
+            margin-left:0.3rem;
+        }
+        .jinzhong{
+            font-size: 0.43rem;
+            font-weight:600;
+            color:#241D03;
+            float:left;
+            margin-top:0.38rem;
+            margin-left:0.4rem;
+        }
+        #down{
+            font-size: 0.45rem;
+            font-weight:800;
+        } 
+        .searchbar{
+            width:5.2rem;
+            height:0.8rem;
+            float:left;
+            position:relative;
+            margin-top:0.27rem;
+            margin-left:0.5rem;
+            border:none;
+            border-radius:7px;
+            padding-left:0.85rem;
+        }
+        #search{
+            font-size: 0.4rem;
+            position: absolute;
+            left:3.6rem;
+            top:0.47rem;
+            color:#AEA9AD;
+        }
+        input::placeholder{
+            color:#B3B1B4;
+            font-size:0.35rem;
+        }
+        .jia{
+            float:left;
+            margin-left:0.5rem;
+            margin-top: 0.4rem;
+        }
+        .codebox{
+            /* width:100%; */
+            text-align: center;
+            font-size:0.35rem;
+        }
+        .code{
+            width:100%;
+            height:4.5rem;
+            background: #FFCA00;
+            position: relative;
+        }
+        .codebox img{
+            width:70%;
+            margin-top: 0.2rem;
+        }
+        .code div{
+            width:1rem;
+            height:1rem;
+            margin:10px auto 0;
+            text-align: center;
+        }
+        .code p{
+            margin-top:3px;
+            color:black;
+        }
+        .flex{
+            display: flex;
+        }
+        .code{
+            flex:1;
+        }
+        .centerbox{
+            width:9.4rem;
+            height:6.6rem;
+            background: #F5F5F5;
+            /* background:#AEA9AD; */
+            position:absolute;
+            top:3.5rem;
+            left:0.3rem;
+            border-radius:10px;
+        }
+        .fast-entry,.fast-entry1{
+            text-align: center;
+            /* font-size:0.31rem; */
+            color:#666;
+        }
+        .entry div{
+            width: 1.2rem;
+            height:1.2rem;
+            /* background: #AEA9AD; */
+            margin:13px auto 0;
+            text-align: center;
+            border-radius:10px;
+        }
+        .entry,.entry1{
+            flex:1;
+        }
+        .entry p,.entry1 p{
+            margin-top:0.1rem;  
+            font-size:0.33rem;
+        }
+        .entry img{
+            margin-top:6px;
+        }
+        .entry1 div{
+            width: 1.1rem;
+            height:1.1rem;
+            /* background: rgb(167, 88, 151); */
+            margin:0 auto;
+            text-align: center;
+            border-radius:10px;
+        }
+        .entry1 img{
+            margin-top:11px;
+        }
+        .xinren{
+            font-size:0.45rem;
+            font-weight:550;
+            margin-top:4.7rem;
+            margin-left:0.35rem;
+            color:black;
+        }
+        .xinrenli{
+            margin-left: 0.58rem;
+            margin-top:0.3rem;
+        }
+        .hot{
+            width:89%;
+            height:2.7rem;
+            /* background: rgb(241, 241, 238); */
+            margin-left:0.56rem;
+            margin-top:0.5rem;
+        }
+        .hot img{
+            float:left;
+            border-radius:8px;
+        }
+        .lunbo{
+            width:94%;
+            height:2.54rem;
+            background: #A67152;
+            margin-top: 0.6rem;
+            margin-left: 0.3rem;
+            border-radius:8px;
+        }
+        .content{
+            width:94%;
+            height:5rem;
+            background: #FFFFFF;
+            margin-top: 0.4rem;
+            margin-left:0.3rem;
+            border-radius:10px;
+            overflow: hidden;
+            /* position: relative; */
+        }
+        .content1{
+            width:90%;
+            height:0.8rem;
+            padding-left:0.3rem;
+            /* background:#A67152; */
+            /* float:left; */
+        }
+        .content2,.content3{
+            width:100%;
+            height:0.8rem;
+            padding-left:0.3rem;
+            /* background:#A67152; */
+        }
+        .content1,.line1{
+            color:black;
+            font-size:0.38rem;
+            font-weight:600;
+            padding-top:0.2rem;
+        }
+        .content2,.line2{
+            color:#666;
+            font-size:0.33rem;
+            padding-top:0.1rem;
+        }
+        .content4{
+            width:100%;
+            height:2.56rem;
+            /* background: #AEA9AD; */
+        }
+        .content4 img{
+            border-radius:8px;
+        }
+        .price,.price2{
+            color:orangered;
+            font-weight:600;
+        }
+        #jpy,#jpy1{
+            font-size:0.3rem;
+            color:orangered;
+        }
+        .price1,.price3{
+            color:#ccc;
+            font-size:0.3rem;
+            text-decoration:line-through;
+            text-decoration-color: #666;
+        }
+        .content5{
+            width:94%;
+            height:3rem;
+            margin-top: 0.3rem;
+            margin-left:0.3rem;
+            border-radius:10px;
+            background: #FFFFFF;
+            overflow:hidden;
+        }
+        .neirong1{
+            width:68%;
+            height:3rem;
+            /* background: #666; */
+            float:left;
+        }
+        .neirong2{
+            width:32%;
+            height:3rem;
+            /* background: #ccc; */
+            float:left;
+        }
+        .line1,.line2,.line3{
+            width:100%;
+            height:1rem;
+            /* background: #ccc; */
+        }
+        .line1,.line2,#jpy1{
+            padding-left:0.3rem;
+        }
+        .content6{
+            width:100%;
+            height:1rem;
+            margin-top:0.5rem;
+            border-radius:10px;
+        }
+        .bottom div{
+            width:0.8rem;
+            height:0.8rem;
+            /* background: #A67152; */
+            margin:0 auto;
+            text-align: center;
+        }
+        .bottom{
+            flex:1;
+        }
+        .bottom p{
+            font-size:0.29rem;
+            color:black;
+        }
+        .meituan{
+            position: absolute;
+            z-index: 1;
+            left:0.7rem;
+            top:0.1rem;
+            border-radius:100%;
+        }
+        .content1-1{
+            float:left;
+        }
+        .shanchu{
+            width:0.5rem;
+            height:0.3rem;
+            /* background: #AEA9AD; */
+            margin-left:8.25rem;
+            margin-top:-0.4rem;
+            border-radius:1rem;
+            overflow:hidden;
+            font-size:0.25rem;
+            border:1px solid #ccc;
+            color:#ccc;
+            line-height: 0.22rem;
+            text-align:center;
+            float:left;
+        }
+        .jiahidden{
+            width:3.4rem;
+            height:7.48rem;
+            background: rgba(99,97,100,0.97);
+            border-radius:5px;
+            position: absolute;
+            right:0.4rem;
+            top:1.3rem;
+            display:none;
+        }
+        .hidden{
+            width:75%;
+            height:1.5rem;
+            /* background: #ccc; */
+            border-bottom:#AEA9AD solid 0.5px;
+            margin-left:0.43rem;
+        }
+        .hidden p{
+            color:rgb(236, 233, 233);
+            font-size:0.38rem;
+            margin-left:0.4rem;
+            margin-top:0.52rem;
+        }
+        .hidden img{
+            margin-top:0.5rem;
+            margin-left:0.2rem;
+        }
+        .hidden img,.hidden p{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <!-- 上 -->
+    <div class="top">
+        <img class="picture" src="src/image/1.png">
+        <div class="jinzhong">晋中
+            <i id="down" class="fa fa-angle-down"></i>
+        </div>
+        <!-- 搜索框 -->
+        <input class="searchbar" placeholder="杨铭宇黄焖鸡米饭">
+        <i id="search" class="fa fa-search"></i>
+        <img width="5%" class="jia" src="src/image/jia.png">
+        <div class="jiahidden">
+            <div class="hidden">
+                <img width="20%" src="src/image/saoyisao (2).png">
+                <p>扫一扫</p>
+            </div>
+            <div class="hidden pay">
+                <img width="20%" src="src/image/fukuanma (1).png">
+                <p>付款码</p>
+            </div>
+            <div class="hidden">
+                <img width="20%" src="src/image/kaifapiao.png">
+                <p>开发票</p>
+            </div>
+            <div class="hidden">
+                <img width="23%" src="src/image/dongche.png">
+                <p style="margin-left: 0.3rem">火车票</p>
+            </div>
+            <div class="hidden">
+                <img width="20%" src="src/image/jipiaoyuding.png">
+                <p>机票</p>
+            </div>
+        </div>
+    </div>
+    <!-- 中 -->
+    <div class="center">
+        <!-- 快捷入口 -->
+        <div class="flex codebox">
+            <div class="code">
+                <div>
+                    <img src="src/image/saoyisao.png">
+                </div>
+                <p>扫一扫</p>
+            </div>
+            <div class="code pay1">
+                <div>
+                    <img src="src/image/fukuanma.png">
+                </div>
+                <p>付款码</p>
+            </div>
+            <div class="code">
+                <div>
+                    <img width="80%" src="src/image/danche.png">
+                </div>
+                <p>骑单车</p>
+            </div>
+            <div class="code">
+                <div>
+                    <img src="src/image/gongjiao.png">
+                </div>
+                <p>乘公交</p>
+            </div>
+        </div>
+        <div class="centerbox">
+            <div class=" flex fast-entry">
+                <div class="entry">
+                    <div style="background: #FF8201">
+                        <img src="src/image/meishi.png">
+                    </div>
+                    <p>美食</p>
+                </div>
+                <div class="entry">
+                    <div style="background: #FE4106">
+                        <img src="src/image/dianying.png">
+                    </div>
+                    <p>电影/演出</p>
+                </div>
+                <div class="entry">
+                    <div style="background: #A67152">
+                        <img src="src/image/jiudian (1).png">
+                    </div>
+                    <p>酒店住宿</p>
+                </div>
+                <div class="entry">
+                    <div style="background: #18C6A8">
+                        <img src="src/image/xiuxianyule.png">
+                    </div>
+                    <p>休闲娱乐</p>
+                </div>
+                <div class="entry">
+                    <div style="background: #FFCB27">
+                        <img src="src/image/zmeituanwaimai.png">
+                    </div>
+                    <p>外卖</p>
+                </div>
+            </div>
+            <div class="flex fast-entry1">
+                <div class="entry1">
+                    <div>
+                        <img width="50%" src="src/image/jingdian.png">
+                    </div>
+                    <p>景点/门票</p>
+                </div>
+                <div class="entry1">
+                    <div>
+                        <img width="60%" style="margin-top:14px;" src="src/image/wodehongbao.png">
+                    </div>
+                    <p>借钱</p>
+                </div>
+                <div class="entry1">
+                    <div>
+                        <img width="65%" src="src/image/zhoubianyou.png">
+                    </div>
+                    <p>周边游/旅游</p>
+                </div>
+                <div class="entry1">
+                    <div>
+                        <img width="60%" src="src/image/liren.png">
+                    </div>
+                    <p>丽人/美发</p>
+                </div>
+                <div class="entry1">
+                    <div>
+                        <img width="55%" src="src/image/huochepiao.png">
+                    </div>
+                    <p>火车票/机票</p>
+                </div>
+            </div>
+            <div class="flex fast-entry1">
+                <div class="entry1">
+                    <div>
+                        <img width="55%" src="src/image/shu.png">
+                    </div>
+                    <p>免费领水果</p>
+                </div>
+                <div class="entry1">
+                    <div>
+                        <img width="55%" src="src/image/gongyuzhuzhai.png">
+                    </div>
+                    <p>民宿/公寓</p>
+                </div>
+                <div class="entry1">
+                    <div>
+                        <img width="50%" src="src/image/huijieqian.png">
+                    </div>
+                    <p>红包签到</p>
+                </div>
+                <div class="entry1">
+                    <div>
+                        <img width="60%" src="src/image/tubiao27.png">
+                    </div>
+                    <p>医疗/牙科</p>
+                </div>
+                <div class="entry1 more1">
+                    <div>
+                        <img width="55%" src="src/image/pxgengduocopy.png">
+                    </div>
+                    <p>更多</p>
+                </div>
+            </div>
+        </div>
+        <p class="xinren">新人成长礼</p>
+        <img class="xinrenli" width="89%" src="src/image/2.png">
+        <div class="hot">
+            <img width="31%" src="src/image/hot1.png" alt="">
+            <img width="31%" style="margin-left:11px;" src="src/image/hot2.png" alt="">
+            <img width="31%" style="margin-left:11px;" src="src/image/hot3.png" alt="">
+        </div>
+        <!-- 轮播图start -->
+        <div class="lunbo">
+            <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="src/image/9.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="src/image/3.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="src/image/4.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="src/image/5.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="src/image/6.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="src/image/7.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="src/image/8.png" /></a></div>
+                    <div class="mui-slider-item"><a href="#"><img src="src/image/9.png" /></a></div>
+                    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="src/image/3.png" /></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <div class="content1">
+                <div class="content1-1">杨铭宇黄焖鸡米饭  单人黄焖鸡米饭餐</div>
+                <div class="shanchu">
+                    <div class="delete1">x</div>
+                </div>
+            </div>
+            <div class="content2">仅售13.8元，价值19元的优惠套餐，欢迎体验</div>
+            <div class="content3">
+                <i id="jpy" class="fa fa-jpy"></i>
+                <span class="price">13.8</span>
+                <span class="price1"><i class="fa fa-jpy"></i>19</span>
+            </div>
+            <div class="content4">
+                <img width="32%" style="margin-left:2px" src="src/image/p1.png" alt="">
+                <img width="32%" src="src/image/p2.png" alt="">
+                <img width="32%" src="src/image/p3.png" alt="">
+            </div>
+        </div>
+        <div class="content5">
+            <div class="neirong1">
+                <div class="line1">黄焖鸡米饭 单人餐 (小份)</div>
+                <div class="line2">仅售18元，价值23元的优惠套餐，欢迎...</div>
+                <div class="line3">
+                    <i id="jpy1" class="fa fa-jpy"></i>
+                    <span class="price2">18</span>
+                    <span class="price3"><i class="fa fa-jpy"></i>23</span>
+                </div>
+            </div>
+            <div class="neirong2">
+                <img src="src/image/p10.png">
+            </div>
+        </div>
+        <div class="content">
+            <div class="content1">
+                <div class="content1-1">荣意快餐 主食 6 选 1</div>
+                <div class="shanchu">
+                    <div class="delete1">x</div>
+                </div>
+            </div>
+            <div class="content2">仅售8.9元，价值0元的优惠套餐，欢迎体验</div>
+            <div class="content3">
+                <i id="jpy" class="fa fa-jpy"></i>
+                <span class="price">8.9</span>
+                <span class="price1"><i class="fa fa-jpy"></i>10</span>
+            </div>
+            <div class="content4">
+                <img width="32%" style="margin-left:2px" src="src/image/p7.png" alt="">
+                <img width="32%" src="src/image/p8.png" alt="">
+                <img width="32%" src="src/image/p9.png" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <div class="content1">
+                <div class="content1-1">同宴火锅 超值2-3人套餐</div>
+                <div class="shanchu">
+                    <div class="delete1">x</div>
+                </div>
+            </div>
+            <div class="content2">仅售134元，价值172元的超值2-3人套餐，提供免费WiFi</div>
+            <div class="content3">
+                <i id="jpy" class="fa fa-jpy"></i>
+                <span class="price">134</span>
+                <span class="price1"><i class="fa fa-jpy"></i>172</span>
+            </div>
+            <div class="content4">
+                <img width="32%" style="margin-left:2px" src="src/image/P4.png" alt="">
+                <img width="32%" src="src/image/P5.png" alt="">
+                <img width="32%" src="src/image/P6.png" alt="">
+            </div>
+        </div>
+        <div class="content6"></div>
+    </div>
+    <!-- 下 -->
+    <div class=" flex bottombox">
+        <div class="bottom">
+            <div>
+                <img width="71%" style="margin-top:0.18rem;position: relative;" src="src/image/home-circle-o.png">
+                <img width="11.4%" class="meituan" src="src/image/mei.png">
+            </div>
+            <p>首页</p>
+        </div>
+        <div class="bottom">
+            <div>
+                <img width="88%" style="margin-top:0.16rem" src="src/image/faxian (1).png">
+            </div>
+            <p>发现</p>
+        </div>
+        <div class="bottom">
+            <div>
+                <img width="78%" style="margin-top:0.16rem" src="src/image/mas-order-line.png">
+            </div>
+            <p>订单</p>
+        </div>
+        <div class="bottom">
+            <div>
+                <img width="75%" style="margin-top:0.16rem" src="src/image/wode.png">
+            </div>
+            <p>我的</p>
+        </div>
+    </div>
+
+    <script src="js/mui.js"></script>
+    <script>
+        var gallery = mui('.mui-slider');
+            gallery.slider({
+            interval:3000
+        });
+
+        // 关闭
+        var shanchu=document.getElementsByClassName('shanchu')
+        var content=document.getElementsByClassName('content')
+            for(var i=0;i<shanchu.length;i++){
+                shanchu[i].index=i
+                shanchu[i].onclick=function(){
+                    content[this.index].style.display='none'
+                }
+            }
+        
+        // 加
+        var jia=document.getElementsByClassName('jia')[0]
+        var jiahidden=document.getElementsByClassName('jiahidden')[0]
+        jia.onclick=function(){
+            if(jiahidden.style.display=="none"){
+                jiahidden.style.display="block";
+            }else{
+                jiahidden.style.display="none";
+            }
+        }
+        
+        var pay=document.querySelector('.pay')
+        pay.onclick=function(){
+            window.location.href='code.html'
+        }
+        var pay1=document.querySelector('.pay1')
+        pay1.onclick=function(){
+            window.location.href='code.html'
+        }
+
+        var more1=document.querySelector('.more1')
+        more1.onclick=function(){
+            window.location.href='more.html'
+        }
+
+        var searchbar=document.querySelector('.searchbar')
+        searchbar.onclick=function(){
+            window.location.href='sousuo.html'
+        }
+    </script>
+</body>
+</html>

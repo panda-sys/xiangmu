@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     *{
+         padding:0;
+         margin:0;
+         list-style:none;
+         -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+     }
+     .jiemian{
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        position:absolute;
+        /* border:solid; */
+        overflow:hidden;
+        /* border:2px solid red; */
+       
+     }
+     .jiemian>div{
+         /* border:solid; */
+         margin-left:10px;
+         margin-right:10px;
+     }
+     .jieyi{
+         height:40px;
+         /* border:solid; */
+     }
+     .jieer{
+         height:50px;
+         /* border:solid 2px blue; */
+     }
+     .jiesan{
+         height:140px;
+         /* border:solid; */
+     }
+     .jiesi{
+         height:90px;
+         /* border:solid 2px blue; */
+     }
+     .jiewu{
+         height:20px;
+         /* border:solid red 2px; */
+     }
+     .jieliu{
+         height:50px;
+         border-top:2px solid rgb(233, 224, 224);
+        border-bottom:2px solid rgb(233, 224, 224);
+     }
+     .jieqi{
+         height:35px;
+         /* border:solid; */
+     }
+     .jieba{
+         height:40px;
+         /* border:solid 2px blue; */
+     }
+     .jiejiu{
+        height:70px;
+         /* border:solid blue 2px; */
+     }
+     .jieshi{
+        height:70px;
+         /* border:solid orange 2px; */
+     }
+     .jieshiyi{
+         height:40px;
+         /* border:solid blue 2px; */
+     }
+     .jieshier{
+         height:45px;
+         /* border:solid orange 2px; */
+     }
+     .jieyi img{
+          margin-left:0;
+          height:20px;
+          margin-top:10px;
+     }
+     .jieyi p{
+        text-align:center;
+        margin-top:-23px;
+        font-size:16px;
+     }
+     .jieer img{
+         height:50px;
+     }
+     .jieer p{
+        margin-left:74%;
+        margin-top:-28px;
+        font-size:10px;
+     }
+     .jiesan>div{
+         width:46.8%;
+         height:140px;
+         /* border:solid; */
+         margin-right:2%;
+         float:left;
+     }
+     .jiesan div:last-child{
+           margin-right:0;       
+     }
+     .jiesan>div img{
+         height:140px;
+     }
+     .jiesi p{
+          font-size:16px;
+          margin-top:4%;
+          margin-left:2%;
+     }
+     .jiewu p{
+         font-size:10px;
+         margin-left:5px;
+     }
+     .jieliu #praisee{
+         height:15px;
+          margin-left:10px;
+          margin-top:17px;
+     } 
+     .jieliu #praise-txtt{
+         font-size:10px;
+          margin-left:10px;
+          margin-top:-2px;
+     }
+     .jieliu  .liuer{
+         left:11%;
+         top:32%;
+         position:absolute;
+     }
+     @keyframes myfirst
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+    0%{
+        width:40px;
+        height:40px;
+    }
+    50%{
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:40px;
+        height:40px;
+    }
+}
+/*点赞图标放大动画结束*/
+/*点赞数量加减动画开始*/
+@keyframes mypraise
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+
+@-moz-keyframes mypraise /* Firefox */
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+
+@-webkit-keyframes mypraise /* Safari 和 Chrome */
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+
+@-o-keyframes mypraise /* Opera */
+{
+    0%{
+        top:-15px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+    25%{
+        top:-20px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    50%{
+        top:-25px;
+        opacity: 1;
+        filter: Alpha(opacity=100);
+        -moz-opacity:1;
+    }
+    75%{
+        top:-30px;
+        opacity: 0.5;
+        filter: Alpha(opacity=50);
+        -moz-opacity:0.5;
+    }
+    100% {
+        top:-35px;
+        opacity: 0;
+        filter: Alpha(opacity=0);
+        -moz-opacity:0;
+    }
+}
+  .jieqi p{
+       font-size:20px;
+       margin-top:5px;
+  }
+  .jieqi .pinger{
+    font-size:15px;
+    margin-left:5px;
+  }
+  .jieba  input{
+      width:78%;
+      height:25px;
+      background:rgb(243, 239, 239);
+      position:absolute;
+      top:40%;
+      left:15%;
+      outline:none;
+      border:none;
+      border-radius:15px;
+      padding-left:15px;
+      
+  }
+  .jieba input::-ms-input-placeholder{
+      /* padding-left:25px; */
+      text-align:center;
+  }
+  .jiejiu .xizijiang{
+      height:40px;
+  }
+  .jiejiu .zanyi{
+      height:15px;
+      left:80%;
+      top:44.5%;
+      position:absolute;
+  }
+  
+  .jiejiu .shuzi{
+      font-size:10px;
+      margin-left:87%;
+      margin-top:-9%;
+  }
+  .jiejiu .tongxiang{
+      margin-left:17%;
+      margin-top:5%;
+      font-size:15px;
+  }
+  .jieshi .zaner{
+      height:15px;
+      left:80%;
+      top:51%;
+      position:absolute;
+  }
+  .jieshi .shuer{
+      font-size:10px;
+      margin-left:87%;
+      margin-top:-13%;
+  }
+  .jieshi .tongxiang{
+      margin-left:17%;
+      margin-top:6%;
+      font-size:15px;
+  }
+   .jieshiyi p{
+       font-size:16px;
+       margin-left:10px;
+       margin-top:10px;
+
+   }
+   .jieshier  img{
+       height:45px;
+   }
+   .jieshisan{
+       height:150px;
+       /* border:solid; */
+   }
+   .jieshisan img{
+       height:250px;
+        /* border:2px red solid; */
+   }
+   .jieshisi{
+       height:27px;
+       margin-top:30%;
+       /* border:2px red solid; */
+   }
+   .jieshiwu{
+       height:20px;
+       /* border:2px red solid; */
+   }
+   .jieshiliu{
+       height:40px;
+       /* border:2px red solid; */
+   }
+   .jieshiqi{
+       height:40px;
+       /* border:2px red solid; */
+   }
+   .jieshisi p{
+        font-size:15px;
+       left:2%;
+       top:87.5%;
+        position:absolute;
+   }
+   .jieshiwu p{
+         font-size:10px;
+         margin-left:5px;
+         margin-top:2px;
+     }
+     .jieshiqi input{
+      width:78%;
+      height:25px;
+      background:rgb(243, 239, 239);
+      position:absolute;
+      top:97%;
+      left:15%;
+      outline:none;
+      border:none;
+      border-radius:15px;
+      padding-left:15px;
+  }
+  .jieshiliu .zansan{
+      height:15px;
+      left:15px;
+      top:93%;
+      position:absolute;
+  }
+  .jieshiliu .shusan{
+      font-size:10px;
+      margin-left:10%;
+      margin-top:13px;
+  }
+  .jieshiliu .shafa{
+      font-size:15px;
+      margin-left:17%;
+      margin-top:-20px;
+  }
+     
+     
+    </style>
+</head>
+<body>
+    <div class="jiemian">
+        <div>
+            <ul>   
+                 <div class="jieyi">
+                     <a href="find.html"> <img  width= 10% src="dierjieduan/发现image/xiangzuol.png"alt=""></a>
+                     <p>内容详情</p>
+                 </div>
+                 <div class="jieer">
+                     <img  width=65%   src="dierjieduan/发现image/hanchil.png" alt="">
+                     <p>大众点评网友</p>
+                 </div>
+                 <div class="jiesan">
+                     <div>
+                         <img  width=100%  src="dierjieduan/发现image/yil.jpg"alt="">
+                     </div>
+                     <div>
+                        <img  width=100%  src="dierjieduan/发现image/yidianl.jpg"alt="">
+                     </div>
+                 </div>
+                 <div class="jiesi">
+                     <p>没想到在合川看到了南瓜饼！好吃，里面糯糯的，外面饼干脆脆的，我妈妈都说好吃，这家店的泡芙里面是有蓝莓的，不腻！地址在交通街的老婆饼屋</p>
+                 </div>
+                 <div class="jiewu">
+                     <p>浏览31.7万</p>
+                 </div>
+                 <div class="jieliu">
+                     <img id="praisee" width=5% src="dierjieduan/发现image/zanl.png"alt="">
+                     <p id="praise-txtt">1</p>
+                     <img class="liuer"  width=85% src="dierjieduan/发现image/gengduol.png"alt="">
+                 </div>
+                 <div class="jieqi">
+                     <p><strong><span class="ping">评论</span></strong><span class="pinger">(2)</span></p>
+                 </div>
+                 <div class="jieba">
+                     <img width=15% src="dierjieduan/发现image/xiaorenl.png" alt="">
+                     <input placeholder="快来写下你的评论吧~" alt="">
+                 </div>
+                 <div class="jiejiu">
+                     <img  class="xizijiang"  width=50% src="dierjieduan/发现image/xizil.png"alt="">
+                     <img  class="zanyi" width=5% src="dierjieduan/发现image/zanl.png" alt="">
+                     <p class="shuzi">1</p>
+                     <p class="tongxiang">桐乡老东兴也有</p>
+                 </div>
+                 <div class="jieshi">
+                    <img  class="xizijiang"  width=50% src="dierjieduan/发现image/datoul.png"alt="">
+                    <img  class="zaner" width=5% src="dierjieduan/发现image/zanl.png" alt="">
+                    <p class="shuer">1</p>
+                    <p class="tongxiang">在哪里</p>
+                 </div>
+                 <div class="jieshiyi">
+                     <p><strong>相关推荐</strong></p>
+                 </div>
+                 <div class="jieshier">
+                     <img width=100% src="dierjieduan/发现image/dianpingl.png"alt="">
+                 </div>
+                 <div class="jieshisan">
+                     <img  width=100% src="dierjieduan/发现image/tuijiancail.jpg" alt="">
+                 </div>
+                 <div class="jieshisi">
+                    <p>真是太好吃啦，每次都会买，排队值得</p>
+                 </div>
+                 <div class="jieshiwu">
+                   <p>浏览量29.1万</p>
+                </div>
+                <div class="jieshiliu">
+                    <img  class="zansan" width=5% src="dierjieduan/发现image/zanl.png" alt="">
+                    <p class="shusan">1</p>
+                    <p class="shafa">快来做第一个评论的人吧~</p>
+                </div>
+                <div class="jieshiqi">
+                    <img width=15% src="dierjieduan/发现image/xiaorenl.png" alt="">
+                    <input placeholder="快来写下你的评论吧~" alt="">
+                </div>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="../xiangmu/dierjieduan/js/iscroll.js"></script>
+    <script>
+        var myScroll=new IScroll('.jiemian');
+        $(function() {
+    $("#praisee").click(function() {
+        var praise_img = $("#praise-img");
+        var text_box = $("#add-num");
+        var praise_txt = $("#praise-txtt");
+        var num = parseInt(praise_txt.text());
+        if (praise_img.attr("src") == ("")) {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' id='praise-img' class='animation' />");
+            praise_txt.removeClass("hover");
+            text_box.show().html("<em class='add-animation'>-1</em>");
+            $(".add-animation").removeClass("hover");
+            num -= 1;
+            praise_txt.text(num)
+        } else {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' id='praise-img' class='animation' />");
+            praise_txt.addClass("hover");
+            text_box.show().html("<em class='add-animation'>+1</em>");
+            $(".add-animation").addClass("hover");
+            num += 1;
+            praise_txt.text(num)
+        }
+    });
+})
+$(function() {
+    $(".zanyi").click(function() {
+        var praise_img = $(".zanyi-img");
+        var text_box = $("#add-num");
+        var praise_txt = $(".shuzi");
+        var num = parseInt(praise_txt.text());
+        if (praise_img.attr("src") == ("")) {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' class='zanyi-img' class='animation' />");
+            praise_txt.removeClass("hover");
+            text_box.show().html("<em class='add-animation'>-1</em>");
+            $(".add-animation").removeClass("hover");
+            num -= 1;
+            praise_txt.text(num)
+        } else {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' class='zanyiimg' class='animation' />");
+            praise_txt.addClass("hover");
+            text_box.show().html("<em class='add-animation'>+1</em>");
+            $(".add-animation").addClass("hover");
+            num += 1;
+            praise_txt.text(num)
+        }
+    });
+})
+$(function() {
+    $(".zaner").click(function() {
+        var praise_img = $(".zaner-img");
+        var text_box = $("#add-num");
+        var praise_txt = $(".shuer");
+        var num = parseInt(praise_txt.text());
+        if (praise_img.attr("src") == ("")) {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' class='zaner-img' class='animation' />");
+            praise_txt.removeClass("hover");
+            text_box.show().html("<em class='add-animation'>-1</em>");
+            $(".add-animation").removeClass("hover");
+            num -= 1;
+            praise_txt.text(num)
+        } else {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' class='zaner-img' class='animation' />");
+            praise_txt.addClass("hover");
+            text_box.show().html("<em class='add-animation'>+1</em>");
+            $(".add-animation").addClass("hover");
+            num += 1;
+            praise_txt.text(num)
+        }
+    });
+})
+$(function() {
+    $(".zansan").click(function() {
+        var praise_img = $(".zansan-img");
+        var text_box = $("#add-num");
+        var praise_txt = $(".shusan");
+        var num = parseInt(praise_txt.text());
+        if (praise_img.attr("src") == ("")) {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' class='zansan-img' class='animation' />");
+            praise_txt.removeClass("hover");
+            text_box.show().html("<em class='add-animation'>-1</em>");
+            $(".add-animation").removeClass("hover");
+            num -= 1;
+            praise_txt.text(num)
+        } else {
+            $(this).html("<img src='http://www.jq22.com/tp/0bf5aaed-99cb-4475-bfd2-7964d1343357.png' class='zansan-img' class='animation' />");
+            praise_txt.addClass("hover");
+            text_box.show().html("<em class='add-animation'>+1</em>");
+            $(".add-animation").addClass("hover");
+            num += 1;
+            praise_txt.text(num)
+        }
+    });
+})
+    </script>
+    
+</body>
+</html>

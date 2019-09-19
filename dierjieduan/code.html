@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>付款码</title>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.css"> 
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: rgb(7, 223, 205);
+        }
+        .box{
+            width:100%;
+            height:1.2rem;
+            /* background:grey; */
+        }
+        .back{
+            width:15%;
+            height:1.2rem;
+            /* background:hotpink; */
+            float:left;
+        }
+        #left{
+            color:#fff;
+            margin-left:0.5rem;
+            margin-top:0.2rem;
+        }
+        .pay{
+            width:15%;
+            height:1.2rem;
+            /* background:hotpink; */
+            float:left;
+            margin-top:0.4rem;
+            font-size:0.5rem;
+            color:white;
+            margin-left:2.7rem;
+        }
+        .dian{
+            float:right;
+            color:white;
+            margin-left:2.7rem;
+            margin-top:-0.2rem;
+            margin-right:0.5rem;
+        }
+        .box1{
+            width:56%;
+            height:1rem;
+            /* background: #ccc; */
+            font-size:0.36rem;
+            color:rgb(255, 255, 255);
+            float:left;
+            margin-left:2.3rem;
+        }
+        .box2{
+            width:90%;
+            height:10rem;
+            background: rgb(255, 255, 255);
+            margin-top:1.5rem;
+            margin-left:0.51rem;
+        }
+        .code1{
+            width:100%;
+            height:8.5rem;
+            /* background: #ccc; */
+        }
+        .code2{
+            width:100%;
+            height:1.5rem;
+            /* background: rgb(185, 174, 174); */
+            color:#999;
+            font-size:0.4rem;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+        .barcode{
+            height:4rem;
+            /* background: rgb(185, 174, 174); */
+        }
+        .tiaoxing{
+            width:90%;
+            height:2rem;
+            margin-left:0.45rem;
+            margin-top:0.6rem;
+        }
+        .erweima{
+            height:4.4rem;
+            border-bottom:solid 0.1px #ccc;
+            /* background: rgb(185, 174, 174); */
+        }
+        .erweima img{
+            margin-left:2.3rem;
+            margin-top:-0.3rem;
+        }
+        .youhui,.sao{
+            width:90%;
+            height:1.5rem;
+            background: rgba(163, 245, 238,0.6);
+            margin-left:0.5rem;
+        }
+        .youhui{
+            margin-top:0.8rem;
+        }
+        .sao{
+            margin-top:0.3rem;
+        }
+        .sao p,.youhui p{
+            font-size:0.36rem;
+            color:white;
+            float:left;
+        }
+        .sao i,.youhui i{
+            font-size:0.6rem;
+            color:white;
+            float:right;
+            margin-right:0.5rem;
+            margin-top:0.45rem;
+        }
+        .youhui img{
+            float:left;
+            margin-top:0.53rem;
+            margin-left:0.4rem;
+        }
+        .youhui p{
+            margin-top:0.53rem;
+            margin-left:0.5rem;
+        }
+        .sao img{
+            float:left;
+            margin-top:0.53rem;
+            margin-left:0.45rem;
+        }
+        .sao p{
+            margin-top:0.5rem;
+            margin-left:0.55rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="back">
+            <i id="left" class="fa fa-angle-left"></i>
+        </div>
+        <div class="pay">付款码</div>
+        <div class="dian">...</div>
+    </div>
+    <div class="box1"><p>可在标记有银联，闪付的商户使用</p></div>
+    <div class="box2">
+        <div class="code1">
+            <div class="barcode">
+                <img class="tiaoxing" src="src/image/tiaoxingma (2).png">
+            </div>
+            <div class="erweima">
+                <img width="48%" src="src/image/erweima-copy.png">
+            </div>
+        </div>
+        <div class="code2">暂无可用银行卡</div>
+    </div>
+    <div class="youhui">
+        <img width="6%" src="src/image/shangjia.png">
+        <p>优惠商家</p>
+        <i class="fa fa-angle-right"></i>
+    </div>
+    <div class="sao">
+        <img src="src/image/saoyisao (2).png">
+        <p>扫一扫</p>
+        <i class="fa fa-angle-right"></i>
+    </div>
+
+    <script>
+        var left=document.querySelector('#left')
+        left.onclick=function(){
+            window.location.href='first.html'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script>document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/10+'px'</script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .seek{
+            width:100%;
+            height:1rem;
+        }
+        .left{
+            position: absolute;
+            left:0.4rem;
+            top:0.3rem;
+            font-size:0.5rem;
+        }
+        .seek1{
+            position: absolute;
+            top:0.35rem;
+            left:0.9rem;
+            width:5rem;
+            height:0.4rem;
+            border:none;
+            outline: none;
+            background: rgba(0,0,0,0.1);
+            border-radius: 4px;
+            padding-left:0.6rem;
+        }
+        .seek2{
+            font-size: 0.3rem;
+            color:lightgrey;
+            position: absolute;
+            top:0.35rem;
+            left:8rem;
+        }
+        .seek3{
+            position: absolute;
+            font-size: 0.4rem;
+            top:0.23rem;
+            left:0.9rem;
+            color: lightgrey;
+            padding-right: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="seek">
+        <i class="fa fa-angle-left left"></i>
+        <input class="seek1" type="text" placeholder="请输入服务、商家或商品">
+        <span class="seek2">搜索</span>
+        <div class="seek3">
+            <i class="fa fa-search"></i>
+        </div>
+    </div>
+    <script>
+        //返回到订单界面
+        var left=document.querySelector('.left')
+        left.onclick=function(){
+            window.location.href="wodedingdan.html";
+        }
+    </script>
+</body>
+</html>
