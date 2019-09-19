@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/10+'px'</script>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #large-box{
+            overflow:hidden; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .achieve{
+            background: #F7F7F7;
+            height:2rem;
+            width:100%;
+            position: fixed;
+        }
+        .achieve1{
+            position: absolute;
+            top:0.1rem;
+            left:0.15rem;
+            width:0.8rem;
+            height:0.8rem;
+            background: rgba(0,0,0,0.2);
+            text-align:center;
+            border-radius: 50%;
+        }
+        .angle-left{
+            font-size:30px;
+            position: absolute;
+            left:0.2rem;
+            color:#fff;
+        }
+        .achieve2{
+            position: absolute;
+            top:0.1rem;
+            right:0.15rem;
+            width:0.8rem;
+            height:0.8rem;
+            background: rgba(0,0,0,0.2);
+            text-align:center;
+            border-radius: 50%;
+        }
+        .erji{
+            position: absolute;
+            right:0.2rem;
+            top:0.2rem;
+        }
+        .achieve3{
+            position: absolute;
+            font-size:18px;
+            left:0.2rem;
+            top:1.2rem; 
+        }
+        .medi{
+            background: #F7F7F7;
+        }
+        .achieve-center{
+            width:90%;
+            height:2.3rem;
+            border-radius: 10px;
+            margin:2rem auto  0rem;
+            background: #fff;
+
+        }
+        .thank{
+            width:100%;
+            height:1.5rem;
+            font-size:12px;
+            border-bottom:1px solid lightgrey;
+        }
+        .thanks{
+            position: absolute;
+            margin-top:0.2rem;
+            margin-left:0.2rem;
+        }
+        .link{
+            background: none;
+            position: absolute;
+            margin-top:0.8rem;
+            border:none;
+            margin-left:0.2rem;
+            border:1px solid lightgray;
+            border-radius: 5px;
+            outline: none;
+            font-size: 12px;
+        }
+        .link1{
+            background: none;
+            background: #FFC300;
+            position: absolute;
+            margin-top:0.8rem;
+            border:none;
+            margin-left:1.8rem;
+            border:1px solid lightgray;
+            border-radius: 5px;
+            outline: none;
+            font-size:12px;
+        }
+        .elastic{
+            display: flex;
+            font-size:12px;
+            text-align: center;
+            align-items: center;
+            background: #F7F7F7;
+            height:0.75rem;
+        }
+        .elastic1{
+            flex:1;
+            border-right:1px lightgray solid;
+        }
+        .elastic2{
+            flex:1;
+        }
+        .achieve-center1{
+            width:90%;
+            height:3rem;
+            background: #fff;
+            border-radius: 10px;
+            margin:0.3rem auto;
+            overflow: hidden;
+        }
+        .good{
+            font-size: 14px;
+            color: black;
+            position: absolute;
+            margin-top:0.2rem;
+            margin-left:0.2rem;
+            font-weight:600;
+            width:100%;
+        }
+        .elastic-box{
+            display: flex;
+            font-size:14px;
+            text-align: center;
+            height:1.5rem;
+            width:100%;
+            margin-top:0.9rem;
+        }
+        .elastic-box1{
+            flex:1;
+            width:3rem;
+            height:1.5rem;
+            overflow: hidden;
+            background: #fff;
+        }
+        .elastic-box-word{
+            display: flex;
+            text-align: center;
+            line-height: 0.6rem;
+            width:100%;
+            height:0.6rem;
+        }
+        .elastic-box2{
+            flex:1;
+            width:3rem;
+            height:0.6rem;
+            overflow: hidden;
+            font-size:12px;
+            background: #fff;
+        }
+        #achieve-center-bottom{
+            width:90%;
+            height:7.8rem;
+            border-radius: 10px;
+            background:#fff;
+            margin:0.3rem auto;
+        }
+        .achieve-center-bottom1{
+            width:100%;
+            height: 1rem;
+            font-size:14px;
+            line-height: 1rem;
+        }
+        .bishengke{
+            margin-left:0.2rem;
+        }
+        hr{
+            border:0.5px solid lightgray;
+            width:95%; 
+            margin:0 auto 0.3rem;
+        }
+        .achieve-center-bottom2{
+            display:flex;
+            width:100%;
+            height: 1.5rem;
+        }
+        .achieve-elastic{
+            flex: 1;
+            height: 1.5rem;
+            font-size: 12px;
+            line-height:1rem;
+        }
+        .achieve-elastic1{
+            flex: 3;
+            font-size: 12px;
+            height: 1.5rem;
+            line-height: 1rem;
+        }
+        .pisa{
+            width:1rem;
+            height: 1rem;
+            margin-left: 0.35rem;
+        }
+        .pisa1{
+            width:100%
+        }
+        .cost{
+            width:100%;
+            height:1rem;
+            font-size: 12px;
+            margin-bottom:0.1rem;
+        }
+        .cost1{
+            margin-left: 0.4rem;
+        }
+        .cost3{
+            margin-left: 0.2rem;
+        }
+        .cost2{
+            margin-right:0.8rem;
+            float: right;
+        }
+        .red{
+            width:100%;
+            height:1rem;
+        }
+        .red-box{
+            width:0.5rem;
+            height:1rem;
+            margin-left:0.4rem;
+            line-height:0.9rem;
+            float: left;
+            font-size: 12px;
+        }
+        .red-box1{
+            width:3rem;
+            height:1rem;
+            margin-left:0.2rem;
+            line-height:0.8rem;
+            float: left;
+            font-size: 12px;
+        }
+        .red-box2{
+            width:1rem;
+            height:1rem;
+            margin-right:0.38rem;
+            line-height:0.8rem;
+            float: right;
+            font-size: 12px;
+        }
+        .discounts{
+            width:1.5rem;
+            height:1rem;
+            float: right;
+            margin-right:0.7rem;
+            font-size:12px;
+            line-height:0.8rem;
+        }
+        .discounts1{
+            width:1.5rem;
+            height:1rem;
+            float: right;
+            font-size:12px;
+            line-height:0.8rem;
+        }
+        .red-elastic{
+            display: flex;
+            font-size:12px;
+            text-align: center;
+            align-items: center;
+            background: #F7F7F7;
+            height:0.87rem;
+            border-top:1px solid lightgray;
+        }
+        .red-elastic1{
+            flex:1;
+            border-right:1px lightgray solid;
+            height:0.87rem;
+            line-height: 1rem;
+        }
+        .red-elastic2{
+            flex:1;
+            height:0.87rem;
+            line-height: 1rem;
+        }
+        .achieve-last{
+            width:90%;
+            height:7.8rem;
+            border-radius: 10px;
+            background:#fff;
+            margin:0.3rem auto;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id='large-box'>
+         <!-- 上 -->
+        <div class="achieve">
+            <div class="achieve1">
+                <i class="fa fa-angle-left angle-left"></i>
+            </div>
+            <div class="achieve2">
+                <img class="erji" src="src/image/erji.png">
+            </div>
+            <div class="achieve3">
+                <span class="achieve4">订单已完成</span>
+            </div>
+        </div>
+        <!-- 中 -->
+        <div class="medi">
+            <div class="achieve-center">
+                <div class="thank">
+                    <p class="thanks">感谢您对美团外卖的信任,期待你的再次光临</p>
+                    <button class="link">打赏骑手</button>
+                    <button class="link1">再来一单</button>
+                </div>
+                <div class="elastic">
+                    <div class="elastic1">
+                        <img  class='shangjia'src='src/image/meituanmendian.png'>
+                        联系商家
+                    </div>
+                    <div class="elastic2">
+                        <img  class='shangjia'src='src/image/meituanqishou.png'>
+                        联系骑手
+                    </div>
+                </div>
+            </div>
+            <div class="achieve-center1">
+                <p class="good">相似好店</p>
+                <div class="elastic-box">
+                    <div class="elastic-box1">
+                        <img  class='shangjia'src='src/image/haidilao.jpg'>
+                    </div>
+                    <div class="elastic-box1">
+                        <img  class='shangjia'src='src/image/liuyiguo.jpg'>
+                    </div>
+                    <div class="elastic-box1">
+                        <img  class='shangjia'src='src/image/kendeji.png'>
+                    </div>
+                </div>
+                <div class="elastic-box-word">
+                    <div class="elastic-box2">
+                        海底捞
+                    </div>
+                    <div class="elastic-box2">
+                        刘一锅筋头巴脑
+                    </div>
+                    <div class="elastic-box2">
+                        肯德基
+                    </div>
+                </div>
+            </div>
+            <div id="achieve-center-bottom">
+                <div class="achieve-center-bottom1">
+                    <span class="bishengke">必胜客现烤披萨(和平北路店)</span>
+                </div>
+                <hr>
+                <div class="achieve-center-bottom2">
+                    <div class="achieve-elastic">
+                        <div class="pisa">
+                            <img class="pisa1" src="src/image/pisa.png">
+                        </div>
+                    </div>
+                    <div class="achieve-elastic1" >
+                        <span class="jingdian">10寸法式经典培根披萨</span>
+                    </div>
+                    <div class="achieve-elastic">
+                        <span class="price">￥34.8</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="cost">
+                    <div class="costone">
+                        <span class="cost1">包装费</span>
+                        <span class="cost2">￥2</span>
+                    </div>
+                    <div class="costone">
+                        <span class="cost1">配送费</span>
+                        <span class="cost2">￥4</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="red">
+                    <div class="red-box">
+                        <img  class="hongbao"src="src/image/red.png">
+                    </div>
+                    <div class="red-box1">
+                        美团红包
+                    </div>
+                    <div class="red-box2">
+                        -￥3
+                    </div>
+                </div>
+                <hr>
+                <div class="red">
+                    <div class="discounts">
+                        合计￥37.8
+                    </div>
+                    <div class="discounts1">
+                        已优惠￥3
+                    </div>  
+                </div>
+                <div class="red-elastic">
+                    <div class="red-elastic1">
+                        <img  class='shangjia'src='src/image/meituanmendian.png'>
+                        联系商家
+                    </div>
+                    <div class="red-elastic2">
+                        <img  class='shangjia'src='src/image/dianhua.png'>
+                        致电商家
+                    </div>
+                </div>
+            </div>
+            <div class="achieve-last">
+                <div class="achieve-center-bottom1">
+                    <span class="bishengke">配送信息</span>
+                </div>
+                <hr>
+                <div class="cost">
+                    <div class="costone">
+                        <span class="cost3">配送服务</span>
+                        <span class="cost2">美团专送</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //返回到我的订单界面
+        var Angleleft=document.querySelector('.angle-left')
+        Angleleft.onclick=function(){
+            window.location.href='wodedingdan.html'
+        } 
+        //跳转到再来一单界面
+        var Link1=document.querySelector('.link1')
+        Link1.onclick=function(){
+            window.location.href="zailaiyidan.html"
+        }
+    </script>
+</body>
+</html>

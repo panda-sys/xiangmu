@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #box{
+            position:fixed;
+            height:2rem;
+            width:100%;
+            top:0;
+            left:0;
+            background:#FFCF00;
+            z-index: 1;
+        }
+        #left{
+            font-size:0.8rem;
+            font-weight:100;
+            float:left;
+            margin-left: 0.3rem;
+            margin-top: 0.57rem;
+        }
+        #shouye{
+            font-size:0.5rem;
+            line-height:2rem;
+            float:left;
+            margin-left: 0.3rem;
+            font-weight:600;
+        }
+        .shuru{
+            width:6.5rem;
+            height:1.1rem;
+            outline:0;
+            border:none;
+            background:#F9F4E1;
+            border-radius:10px;
+            float:left;
+            margin-left: 0.3rem;
+            margin-top: 0.45rem;
+            position:relative;
+            padding-left:1rem;
+        }
+        input::-webkit-input-placeholder{
+            color:#8E8E91;
+            font-size:14px;
+            line-height:1.1rem;
+        }
+        #pic{
+            z-index:1;
+            font-size:18px;
+            color:#8E8E91;
+            position:absolute;
+            left:2.5rem;
+            top:0.77rem;
+        }
+        #service{
+            font-size:0.4rem;
+            font-weight:600;
+            float:left;
+            margin-left: 0.3rem;
+        }
+        .picture{
+            width:5%;
+            float:left;
+            margin-left:0.5rem;
+        }
+        #bianji{
+            float:left;
+            margin-left:0.4rem ;
+            width:1.1rem;
+            height:0.7rem;
+            border-radius:5px;
+            outline:0;
+            border:none;
+            background:#FFCF00;
+            color:#1A1D22;
+        }
+        #box1{
+            width:100%;
+            margin-top:2rem;
+            background:#F8F8F8;
+        }
+        #box2{
+            width:100%;
+            height:1rem;
+            background:#fff;
+            margin-top:2.2rem;
+            line-height: 0.8rem;
+        }
+        #box3{
+            width:100%;
+            height:2rem;
+            background: #fff;
+            margin-top:0.3rem;
+        }
+        #meishi{
+            height:1rem;
+            font-size:0.45rem;
+            font-weight:600;
+            margin-left: 0.3rem;
+            line-height:1rem;
+        }
+        #module1{
+            width:100%;
+            height:2.5rem;
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        .tubiao{
+            width:17%;
+            height:1.5rem;
+        }
+        .m1{
+            margin-left:0.5rem;
+        }
+        .text{
+            font-size:0.35rem;
+            color:#2B2B2B;
+            text-align:center;
+            margin-top: -0.1rem;
+        }
+        #module2{
+            width:100%;
+            height:2.5rem;
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        .tubiao1{
+            width:25%;
+            height:2.5rem;
+            float:left;
+        }
+        .text1{
+            font-size:0.35rem;
+            color:#2B2B2B;
+            margin-left: 0.2rem;
+        }
+        #box7{
+            width:100%;
+            height:6rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部start -->
+    <div id="box">
+        <i id="left" class="fa fa-angle-left"></i>
+        <span id="shouye">首页</span>
+        <i id="pic" class="fa fa-search"></i><input class="shuru" placeholder="商家、商圈或服务">
+    </div>
+    <div id="box1">
+        <!-- 我的服务start -->
+        <div id="box2">
+            <span id="service">我的服务</span>
+            <img class="picture" style="margin-left: 0.8rem;margin-top: 0.1rem" src="src/image/service1.png" alt="">
+            <img class="picture" style="margin-top: 0.2rem" src="src/image/service2.png" alt="">
+            <img class="picture" style="margin-top: 0.1rem" src="src/image/service3.png" alt="">
+            <img class="picture" style="margin-top: 0.1rem" src="src/image/service4.png" alt="">
+            <img class="picture" style="margin-top: 0.1rem" src="src/image/service5.png" alt="">
+            <img class="picture" style="margin-top: 0.1rem" src="src/image/点点 (1).png" alt="">
+            <button id="bianji">编辑</button>
+        </div>
+        <!-- 美食、酒店旅游、出行、娱乐 -->
+        <div id="box3">
+            <div id="box4" height="3rem">
+                <div id="meishi">美食</div>
+                <div id="module1">
+                    <div class="tubiao">
+                        <img class="m1"  width="30%" src="src/image/m1.png" alt="">
+                        <p class="text">美食</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/m2.png" alt="">
+                        <p class="text">外卖</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/m3.png" alt="">
+                        <p class="text">超市/生鲜</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="35%" src="src/image/m4.png" alt="">
+                        <p class="text">小象/生鲜</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="35%" src="src/image/m5.png" alt="">
+                        <p class="text">买菜</p>
+                    </div>
+                </div>
+            </div>
+            <div id="box5" height="3rem">
+                <div id="meishi">酒店旅游</div>
+                <div id="module1">
+                    <div class="tubiao">
+                        <img class="m1"  width="35%" src="src/image/j1.png" alt="">
+                        <p class="text">酒店住宿</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="35%" src="src/image/j2.png" alt="">
+                        <p class="text">民宿/公寓</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/j3.png" alt="">
+                        <p class="text">周边游</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/j4.png" alt="">
+                        <p class="text">景点/门票</p>
+                    </div>
+                    <div class="tubiao"></div>
+                </div>
+            </div>
+            <div id="box6" height="3rem">
+                <div id="meishi">出行</div>
+                <div id="module1">
+                    <div class="tubiao">
+                        <img class="m1"  width="40%" src="src/image/c1.png" alt="">
+                        <p class="text">打车</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/c2.png" alt="">
+                        <p class="text">摩拜单车</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/c3.png" alt="">
+                        <p class="text">火车票</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/c4.png" alt="">
+                        <p class="text">公交</p>
+                    </div>
+                    <div class="tubiao"></div>
+                </div>
+            </div>
+            <div id="box7">
+                <div id="meishi">娱乐</div>
+                <div id="module2">
+                    <div class="tubiao">
+                        <img class="m1"  width="30%" src="src/image/y1.png" alt="">
+                        <p class="text">电影/演出</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/y2.png" alt="">
+                        <p class="text">休闲娱乐</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/y3.png" alt="">
+                        <p class="text">红包签到</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="35%" src="src/image/y4.png" alt="">
+                        <p class="text">健身/游泳</p>
+                    </div>
+                    <div class="tubiao" width="30%">
+                        <img class="m1" width="35%" src="src/image/y5.png" alt="">
+                        <p class="text">免费水果</p>
+                    </div>
+                </div>
+                <div class="tubiao1">
+                    <img class="m1" width="25%" src="src/image/y6.png" alt="">
+                    <p class="text1">免费领福利</p>
+                </div>
+            </div>
+            <div id="box8">
+                <div id="meishi">生活</div>
+                <div id="module2">
+                    <div class="tubiao">
+                        <img class="m1"  width="30%" src="src/image/s1.png" alt="">
+                        <p class="text">手机充值</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/s2.png" alt="">
+                        <p class="text">丽人/美发</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/s3.png" alt="">
+                        <p class="text">医学美容</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="35%" src="src/image/s4.png" alt="">
+                        <p class="text">亲子/乐园</p>
+                    </div>
+                    <div class="tubiao" width="30%">
+                        <img class="m1" width="35%" src="src/image/s5.png" alt="">
+                        <p class="text">结婚/摄影</p>
+                    </div>
+                </div>
+                <div id="module2">
+                    <div class="tubiao">
+                        <img class="m1"  width="30%" src="src/image/s6.png" alt="">
+                        <p class="text">跑腿代购</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/s7.png" alt="">
+                        <p class="text">学习培训</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/s8.png" alt="">
+                        <p class="text">生活服务</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="35%" src="src/image/s9.png" alt="">
+                        <p class="text">家居装修</p>
+                    </div>
+                    <div class="tubiao" width="30%">
+                        <img class="m1" width="35%" src="src/image/s10.png" alt="">
+                        <p class="text">医疗/牙科</p>
+                    </div>
+                </div>
+                <div id="module2">
+                    <div class="tubiao">
+                        <img class="m1"  width="30%" src="src/image/s11.png" alt="">
+                        <p class="text">借钱</p>
+                    </div>
+                    <div class="tubiao">
+                        <img class="m1" width="40%" src="src/image/s12.png" alt="">
+                        <p class="text">墨迹天气</p>
+                    </div>
+                    <div class="tubiao"></div>
+                    <div class="tubiao"></div>
+                    <div class="tubiao"></div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script>
+    var left=document.querySelector('#left')
+    left.onclick=function(){
+        window.location.href='first.html';
+    }
+    </script>
+</body>
+</html>
