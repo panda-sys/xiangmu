@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>帮助</title>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.css"> 
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box1{
+            width:100%;
+            height:1.5rem;
+            /* background:blanchedalmond; */
+        }
+        #left{
+            font-size:1rem;
+            color:#666;
+            margin-left:0.4rem;
+            line-height:1.5rem;
+            float:left;
+        }
+        .service{
+            font-size:0.5rem;
+            float:left;
+            line-height:1.5rem;
+            margin-left:3.1rem;
+        }
+        .box2{
+            width:100%;
+            height:3.5rem;
+            background:#FFCA00;
+            position: relative;
+        }
+        .logo{
+            width:20%;
+            height:3.5rem;
+            /* background: #666; */
+            float:left;
+        }
+        .content{
+            width:80%;
+            height:3.5rem;
+            /* background: green; */
+            float:left;
+        }
+        .logo1{
+            width:1.25rem;
+            height:1.25rem;
+            background: #fff;
+            border-radius:100%;
+            margin-top:1rem;
+            margin-left:0.42rem;
+        }
+        .logo1 img{
+            margin-left:0.2rem;
+        }
+        .content p:nth-of-type(1){
+            font-size:0.45rem;
+            margin-top:0.8rem;
+        }
+        .content p:nth-of-type(2){
+            font-size:0.35rem;
+            margin-top:0.2rem;
+            color:rgb(65, 62, 62);
+        }
+        .box3{
+            width:84.5%;
+            height:9.2rem;
+            background: #fff;
+            position:absolute;
+            top:4.5rem;
+            left:0.8rem;
+            border-radius:5px;
+            box-shadow:2px 2px 8px #ebe7e7;
+        }
+        .question{
+            width:96%;
+            height:1.3rem;
+            background: #fff;
+            margin-left:0.16rem;
+            border:none;
+            border-bottom:rgb(219, 214, 214) 0.5px solid;
+            font-size:0.38rem;
+            color:#000;
+            line-height:1.3rem;
+        }
+        .question1{
+            width:88%;
+            height:1.3rem;
+            background: #fff;
+            margin-left:0.5rem;
+            border:none;
+            border-bottom:rgb(219, 214, 214) 0.5px solid;
+        }
+        .question p{
+            margin-left:0.5rem;
+        }
+        .question1 p{
+            margin-left:0.1rem;
+            float:left;
+            font-size:0.33rem;
+            color:rgb(107, 104, 104);
+            line-height:1.3rem;
+        }
+        .question2 p{
+            font-size:0.33rem;
+            color:rgb(107, 104, 104);
+            line-height:1.3rem;
+            margin-left:0.6rem;
+            float:left;
+        }
+        #right{
+            margin-left:3.8rem;
+            line-height:1.3rem;
+            font-size:0.4rem;
+            color:#ccc;
+        }
+        i{
+            float:left;
+        }
+        #right1{
+            font-size:0.4rem;
+            color:#ccc;
+            margin-left:4.1rem;
+            line-height:1.3rem;
+        }
+        #right2{
+            font-size:0.4rem;
+            color:#ccc;
+            margin-left:4.4rem;
+            line-height:1.3rem;
+        }
+        #right3{
+            font-size:0.4rem;
+            color:#ccc;
+            margin-left:2.3rem;
+            line-height:1.3rem;
+        }
+        #right4{
+            font-size:0.4rem;
+            color:#ccc;
+            margin-left:1.4rem;
+            line-height:1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="box1">
+        <i id="left" class="fa fa-angle-left"></i>
+        <p class="service">在线客服</p>
+    </div>
+    <!-- 客服小布 -->
+    <div class="box2">
+        <div class="logo">
+            <div class="logo1">
+                <img src="src/image/zaixiankefu.png">
+            </div>
+        </div>
+        <div class="content">
+            <p>Hi，我是客服小布</p>
+            <p>选择您遇到的问题，可以为您提供更快捷的服务哦</p>
+        </div>
+    </div>
+    <!-- 问题 -->
+    <div class="box3">
+        <div class="question">
+            <p>您可能遇到以下问题</p>
+        </div>
+        <div class="question1">
+            <p>忘记登录密码怎么办？</p>
+            <i id="right" class="fa fa-angle-right"></i>
+        </div>
+        <div class="question1">
+            <p>收不到验证码短信？</p>
+            <i id="right1" class="fa fa-angle-right"></i>
+        </div>
+        <div class="question1">
+            <p>如何解绑手机号？</p>
+            <i id="right2" class="fa fa-angle-right"></i>
+        </div>
+        <div class="question1">
+            <p>如何修改手机号？</p>
+            <i id="right2" class="fa fa-angle-right"></i>
+        </div>
+        <div class="question1">
+            <p>邮箱/昵称和密码如何登录美团？</p>
+            <i id="right3" class="fa fa-angle-right"></i>
+        </div>
+        <div class="question2">
+            <p>骑手账号-无法登录问请拨打10101777</p>
+            <i id="right4" class="fa fa-angle-right"></i>
+        </div>
+    </div>
+
+    <script>
+        var left=document.querySelector('#left')
+        left.onclick=function(){
+            window.location.href='login.html'
+        }
+    </script>
+</body>
+</html>
