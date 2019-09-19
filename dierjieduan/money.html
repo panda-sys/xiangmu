@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            -webkit-box-sizing:border-box;
+            box-sizing: border-box;
+        }
+        .boss{
+            position:fixed;
+            left:0px;
+            top:0px;
+            right:0px;
+            display:none;
+            background:#fff;
+            z-index: 200;
+        }
+        .top{
+            width:100%;
+            height:60px;
+            color:#111;
+            font-size:23px;
+            text-align:center;
+            padding-top:2.8%;
+        }
+        .topBack{
+            position:absolute;
+            top:0px;
+            left:1%;
+            width:10%;
+            font-size:40px;
+            color:#111;
+            z-index: 400;
+        }
+        .topImg{
+            position:fixed;
+            right:5%;
+            top:0px;
+            margin-left:2%;
+        }
+        .top a{
+            text-decoration:none;
+            color:#333;
+        }
+        .topImg div{
+            float:right;
+            width:10%;
+            height:100%;
+            margin-left:6%;
+            padding-top:3%;
+        } 
+        /* center */
+        .center{
+            width:100%;
+            height:1100px;
+            position:absolute;
+            top:0px;
+            left:0px;
+            bottom:0px;
+            right:0px;
+            padding:5%;
+        } 
+        .navigation{
+            width:100%;
+            height:50px;
+            display: flex;
+        }
+        .naviBack{
+            font-size:45px;
+            color:#333;
+            width:10%;
+            position:absolute;
+            top:0px;
+        }
+        .naviBack a{
+            text-decoration:none;
+            color:#333;
+        }
+        .naviImg img:first-of-type{
+            width:2rem;
+            position:absolute;
+            top:2%;
+            right:20%;
+            margin-left:15%;
+        }
+        .naviImg img:last-of-type{
+            width:2rem;
+            position:absolute;
+            top:2%;
+            right:5%;
+            margin-left:20%;
+        }
+        .money{
+            width:100%;
+            height:50px;
+            margin-top:3%;
+            font-size:28px;
+            color:#333;
+        }
+        .bank{
+            width:100%;
+            height:130px;
+            margin-top:4%;
+            background:#51CED2;
+            border-radius:10px;
+            padding-top:8%;
+            
+        }
+        .bank p:first-of-type{
+            font-size:18px;
+            color:#F3F3FF;
+            margin-left:10%;
+        }
+        #angle{
+            color:#95E9EF;
+            font-size:20px;
+            margin-left:2%;
+            width:5%;
+            height:10%;
+        }
+        .bank p:last-of-type{
+            font-size:30px;
+            color:#FFF8FF;
+            margin:2% 0 0 10%;
+        }
+        .bank p span{
+            margin-left:40%;
+        }
+        .menu{
+            width:100%;
+            height:60px;
+            margin-top:8%;
+            display:flex;
+        }
+        .menu div{
+            flex:1;
+            margin-right:4%;
+            margin-left:4%;
+            text-align:center;
+            color:#333;
+            font-size:11px;
+        }
+        menu div:last-of-type{
+            margin-right:3%;
+        }
+        .menu div img{
+            width:45%;
+        }
+        .menu div p{
+            margin-top:5%;
+        }
+        .moneyBox{
+            width:100%;
+            height:12.5%;
+            border:1px solid #eee;
+            margin-top:6%;
+            border-radius:15px;
+            padding:3% 5% 15% 5%;
+        }
+        .moneyBox-menu{
+            width:100%;
+            height:25px;
+            display:flex;
+        }
+        .moneyBox-menu div:first-of-type{
+            flex:0.4;
+            height:100%;
+        }
+        .moneyBox-menu div:nth-child(2){
+             flex:5;
+             font-size:18px;
+             color:#333;
+             padding-top:0.3rem;
+        }
+        .moneyBox-menu div:nth-child(3){
+             flex:0.1;
+             font-size:25px;
+             color:#CDCDCD;
+        }
+        .moneyBox-menu img{
+            width:2.3rem;
+        }
+        .moneyBox-content{
+            width:100%;
+            height:70px;
+            margin-top:10px;
+            display:flex;
+            padding-left:2%;
+        }
+        .moneyBox-content div:first-of-type{
+            flex:2;
+            height:100%;
+            color:#333;
+        }
+        .moneyBox-content div:last-of-type{
+            flex:1.5;
+            height:100%;
+            text-align:center;
+        }
+        .moneyBox-content div p{
+            color:#111;
+            font-size:30px;
+            margin-bottom:2%;
+        }
+        .moneyBox-content div span{
+            color:#9D9D9D;
+        }
+        .moneyBox-content div button{
+            width:80%;
+            height:35px;
+            border-radius:30px;
+            border:none;
+            background:#50CDD1;
+            margin-top:10%;
+            color:#D0E6F3;
+            font-size:15px;
+            margin-left:20%;
+        }
+        .car{
+            width:100%;
+            margin-top:5%;
+            display:flex;
+            height:13%;
+        }
+        .car .carBox{
+            flex:1;
+            height:100%;
+            padding:5%;
+            margin-left:5%;
+            border:1px solid #eee;
+            padding-bottom:15%;
+        }
+        .car .carBox:first-of-type{
+            margin-left: 0px;
+        }
+        .car .carMenu{
+            width: 100%;
+            height:30px;
+        }
+        .carMenu div:last-of-type{
+            margin-left:5%;
+        }
+        .carMenu div img {
+            width:17%;
+        } 
+        .carMenu div span:first-of-type{
+            color:#333;
+            font-size:20px;
+        }
+        .carMenu{
+            display:flex;
+            height:100%;
+        }
+        .carMenu div:first-of-type{
+            flex:0.3px;
+            margin-top:-2.5%;
+            margin-right:3%;
+        }
+        .carMenu div:nth-child(2){
+            flex:10;
+            color:#111;
+            font-size:14px;
+            margin-top:-1%;
+        }
+        .carMenu div:nth-child(3){
+            flex:0.01;
+            color:#9D9D9D;
+            font-size:22px;
+            margin-top: -6.5%;
+        }
+        .carMenu div img{
+            width:2rem;
+        }
+        .carMenu div img:last-of-type{
+            width:1.4rem;
+        }
+        .carContent{
+            width: 100%;
+            height:70px;
+            margin-top:3%;
+        }
+        .carContent p{
+            font-size:30px;
+            color:#111;
+            margin-bottom:3%;
+        }
+        .carContent span{
+            font-size:15px;
+            color:#9D9D9D;
+        }
+        .more{
+            width: 100%;
+            height:2%;
+            margin-top:10%;
+            color:#333;
+            font-size:25px;
+        }
+        .moreBox{
+           color:#333;
+           font-size:34px;
+           width:100%;
+           height:60px;
+           margin-top:20px;
+           margin-top:13%;
+        }
+        .moreBox-one{
+            display:flex;
+            height:100%;
+            margin-bottom:10%;
+        }
+        .moreBox-one div{
+            flex:1;
+            height:40%;
+            margin-left:5%;
+            text-align:center;
+            font-size:15px;
+            color:#333;
+        }
+        .moreBox-one div:first-of-type{
+            margin-left:0px !important;
+        }
+        .moreBox-one div img{
+            width:40%;
+        }
+        .over{
+            width:100%;
+            height:5%;
+            margin-top:40%;
+            text-align:center;
+        }
+        .over p{
+            color:#878787;
+            font-size:25px;
+            margin-bottom:2%;
+        }
+        .over span{
+            color:#A4A4A4;
+            font-size:16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boss">
+        <div class="top">
+            <div class="topBox">
+                <p><strong>美团钱包</strong></p>
+            </div>
+            <div class="topBack">
+               <a href="mine.html"><i class="fa fa-angle-left"></i></a>
+            </div>
+            <div class="topImg">
+                <div>
+                    <img width="75%" src="images/xinfeng.png">
+                </div>
+                <div>
+                    <img width="80%" src="images/shezhi.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="navigation"><!-- navigation -->
+            <div class="naviBack">
+                <a href="mine.html"><i class="fa fa-angle-left"></i></a>
+            </div>
+            <div class="naviImg">
+                <img  src="images/xinfeng.png">
+                <img src="images/shezhi.png">
+            </div>
+        </div><!-- navigation结束 -->
+        <div class="money">
+            <p><strong>美团钱包</strong></p>
+        </div>
+        <div class="bank">
+                <p>余额(元)<i id="angle" class="fa fa-angle-right"></i><span>银行卡(张)<i id="angle" class="fa fa-angle-right"></i></span></p>
+                <p><strong>0.00</strong><span><strong>&nbsp;&nbsp;&nbsp;2</strong></span></p>
+        </div>
+        <div class="menu">
+            <div>
+                <img src="images/xianjin.png">
+                <P>签到赢现金</P>
+            </div>
+            <div>
+                <img src="images/xianjinquan.png">
+                <p>现金券</p>
+            </div>
+            <div>
+                <img src="images/yinhangka.png">
+                <p>银行卡立减</p>
+            </div>
+            <div>
+                <img src="images/zhangdan.png">
+                <p>我的账单</p>
+            </div>
+        </div>
+        <div class="moneyBox">
+            <div class="moneyBox-menu">
+                <div>
+                     <img src="images/jieqian.png">
+                </div>
+               <div>
+                   <p>借钱</p>
+               </div>
+               <div>
+                   <i class="fa fa-angle-right"></i>
+               </div>
+            </div>
+            <div class="moneyBox-content">
+               <div>
+                   <p><strong>100,000</strong></p>
+                   <span>最高额度（元）</span>
+                </div>
+                <div>
+                    <button>获取额度</button>
+                </div>
+            </div>
+        </div>
+        <div class="car">
+           <div class="carBox">
+               <div class="carMenu">
+                    <div>
+                        <img src="images/xinyongka1.png">
+                    </div>
+                    <div>
+                        <p>美团信用卡</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+               </div>
+               <div class="carContent">
+                   <p><strong>100,000</strong></p>
+                   <span>最高额度（元）</span>
+               </div>
+           </div>
+           <div class="carBox">
+                <div class="carMenu">
+                    <div>
+                        <img src="images/licai.png">
+                    </div>
+                    <div>
+                        <p>理财</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="carContent">
+                    <p><strong>3.69%</strong></p>
+                    <span>近七日年化</span>
+                </div>
+           </div>
+        </div>
+        <div class="more">
+            <p><strong>更多服务</strong></p>
+        </div>
+        <div class="moreBox">
+          <Div class="moreBox-one">
+                <div>
+                    <img src="images/shanfu1.png">
+                    <p>信用卡还贷</p>
+                </div>
+                <div>
+                    <img src="images/fangzi.png">
+                    <p>溜溜住</p>
+                </div>
+                <div>
+                    <img src="images/shanfu1.png">
+                    <p>美团闪付</p>
+                </div>
+                <div>
+                    <img src="images/ka1.png">
+                    <p>美团卡</p>
+                </div>
+          </Div>
+          <Div class="moreBox-one">
+                <div>
+                    <img src="images/huzhu.png">
+                    <p>美团互助</p>
+                </div>
+                <div>
+                    <img src="images/daikuan.png">
+                    <p>生意贷</p>
+                </div>
+                <div>
+                    <img src="images/timu.png">
+                    <p>每日一题</p>
+                </div>
+                <div>
+                </div>
+          </Div>
+        </div>
+        <div class="over">
+            <p>美团钱包</p>
+            <span>-美团旗下金融服务平台-</span>
+        </div>
+    </div>
+
+    <script>
+      var boss=document.getElementsByClassName('boss')[0]
+      window.onscroll=function(){
+          var bbb=document.documentElement.scrollTop
+          if(bbb>50){
+              boss.style.display='block'
+          }else{
+              boss.style.display='none'
+          }
+      }
+    </script>
+</body>
+</html>
