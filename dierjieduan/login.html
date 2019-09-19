@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <link rel="stylesheet" href="css/font-awesome.css"> 
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width:100%;
+            height:1.2rem;
+            /* background:grey; */
+        }
+        .close{
+            width:15%;
+            height:1.2rem;
+            /* background:hotpink; */
+            float:left;
+            margin-left:0.1rem;
+        }
+        .help{
+            width:15%;
+            height:1.2rem;
+            /* background:hotpink; */
+            float:right;
+            margin-right:0.15rem;
+            margin-top:0.1rem;
+            font-size:0.4rem;
+            line-height:1.2rem;
+            text-align:center;
+        }
+        .close img{
+            margin-left:0.3rem;
+        }
+        .box2{
+            width:88%;
+            height:3.3rem;
+            /* background:cornflowerblue; */
+            font-size:0.8rem;
+            font-weight:350;
+            color:#000000;
+            line-height:3.3rem;
+            margin-left:1rem;
+        }
+        .box3{
+            width:100%;
+            height:3.5rem;
+            margin-top:0.1rem;
+            /* background:darkcyan; */
+        }
+        .password{
+            width:78%;
+            height:1.2rem;
+            margin-left:1rem;
+            border:none;
+            border-bottom:darkgray solid 0.8px;
+            outline: 0;
+        }
+        .tel{
+            width:63.5%;
+            height:1.2rem;
+            margin-left:1rem;
+            border:none;
+            border-bottom:darkgray solid 0.8px;
+            outline: 0;
+            position: relative;
+            padding-left:1.5rem;
+        }
+        .tel1{
+            width:1.2rem;
+            height:1.2rem;
+            /* background: red; */
+            z-index:1;
+            position:absolute;
+            left:1rem;
+            top:4.9rem;
+            font-size:0.3rem;
+            color:black;
+        }
+        .tel::placeholder,.password::placeholder{
+            color:#ccc;
+            font-size:0.45rem;
+        }
+        .shuzi{
+            float: left;
+            margin-top:0.4rem;
+            margin-left:0.2rem;
+        }
+        #right{
+            font-size:0.48rem;
+            margin-left:0.2rem;
+            float:left;
+            margin-top:0.33rem;
+        }
+        input{
+            font-size:0.55rem;
+            caret-color:orange;
+        }
+        .box4{
+            width:100%;
+            height:2rem;
+            /* background:pink; */
+            margin-top:0.7rem;
+        }
+        .login{
+            width:78%;
+            height:1.36rem;
+            margin-left:1rem;
+            border:none;
+            background:rgb(245, 245, 207);
+            border-radius:10px;
+            color:#999;
+            font-weight:600;
+            font-size:0.38rem;
+            outline:0;
+        }
+        .box5{
+            width:78%;
+            height:1rem;
+            /* background: #999; */
+            margin-left:1rem;
+            margin-top:0.1rem;
+            font-size:0.35rem;
+            color:#666;
+        }
+        .pin{
+            float:left;
+            line-height:1rem;
+        }
+        .question{
+            float:right;
+            line-height:1rem;
+        }
+        .box6{
+            width:78%;
+            height:2.7rem;
+            /* background:powderblue; */
+            margin-left:1rem;
+            margin-top:0.1rem;
+        }
+        .weixin,.qq{
+            width:1.5rem;
+            height:1.5rem;
+            /* background: #999; */
+            border:rgb(233, 230, 230) solid 0.8px;
+            border-radius:50%;
+            float:left;
+            margin-top:1rem;
+        }
+        .weixin{
+            margin-left:0.8rem;
+        }
+        .qq{
+            margin-left:3rem;
+        }
+        .weixin1{
+            margin-top:0.35rem;
+            margin-left:0.35rem;
+        }
+        .qq1{
+            margin-top:0.32rem;
+            margin-left:0.33rem;
+        }
+        .box7{
+            width:78%;
+            height:1rem;
+            /* background:papayawhip; */
+            margin-left:1rem;
+            font-size:0.3rem;
+            color:#666;
+        }
+        .box7 p{
+            float:left;
+            margin-top:0.1rem;
+        }
+        .box7 p:nth-of-type(1){
+            margin-left:1.2rem;
+        }
+        .box7 p:nth-of-type(2){
+            margin-left:4.1rem;
+        }
+        .box8{
+            width:88%;
+            height:1rem;
+            /* background: #999; */
+            margin-left:0.6rem;
+            margin-top:0.48rem;
+            font-size:0.3rem;
+            color:#999;
+        }
+        .box8 span{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="box">
+        <div class="close">
+            <img class="close1" width="50%" src="src/image/cross.png">
+        </div>
+        <div class="help">帮助</div>
+    </div>
+    <div class="box2">欢迎登陆美团</div>
+    <!-- 登录 -->
+    <div class="box3">
+        <div class="tel1">
+            <p class="shuzi">+86</p>
+            <i id="right" class="fa fa-angle-right"></i>
+        </div>
+        <input class="tel" placeholder="请输入手机号"><br>
+        <input class="password" type="password" placeholder="请输入密码">
+    </div>
+    <div class="box4">
+        <button class="login">登&nbsp;录</button>
+    </div>
+    <div class="box5">
+        <div class="pin">验证码登录</div>
+        <div class="question">遇到问题</div>
+    </div>
+    <div class="box6">
+        <div class="weixin">
+            <img class="weixin1" src="src/image/icon-.png">
+        </div>
+        <div class="qq">
+            <img width="60%" class="qq1" src="src/image/QQ.png">
+        </div>
+    </div>
+    <div class="box7">
+        <p>微信</p>
+        <p>QQ</p>
+    </div>
+    <div class="box8">登录代表同意
+        <span>美团点评用户协议、隐私政策</span>，
+        并授权使用您的美团点评账号信息（如昵称、头像、收货地址）以便您统一管理
+    </div>
+    <script>
+        // 关闭 帮助
+        var close1=document.querySelector('.close1')
+        var help=document.querySelector('.help')
+        close1.onclick=function(){
+            window.location.href="first.html"
+        }
+        help.onclick=function(){
+            window.location.href="help.html"
+        }
+
+        // 登录
+        var login=document.querySelector('.login')
+        var tel=document.querySelector('.tel')
+        var pwd=document.querySelector('.password')
+        login.onclick=function(){
+            window.location.href="first.html"
+            tel.value=''
+            pwd.value=''
+        }
+    </script>
+</body>
+</html>
