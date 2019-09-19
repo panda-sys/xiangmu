@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/10+'px'</script>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        .elect{
+            overflow:hidden; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #f7f7f7;
+        }
+        .elect-box{
+            width: 100%;
+            height: 100%;
+            /* background: red; */
+        }
+        .elect-box-top{
+            width:100%;
+            height: 1rem;
+            background: white;
+            font-size: 20px;
+            line-height: 1rem;
+        }
+        .chevron-left{
+            margin-left:0.2rem;
+            margin-right:0.2rem;
+            color:lightgray;
+        }
+        .elect-word{
+            font-size: 14px;
+            color:#333;
+        }
+        .elect-word1{
+            font-size: 14px;
+            color:#333;
+            float: right;
+            margin-right:0.2rem;
+        }
+        .elect-box-top1{
+            width:100%;
+            height:1.2rem;
+            background: white;
+            font-size:14px;
+            line-height: 1.2rem;
+            border-bottom: 1px solid lightgray;
+        }
+        .location{
+            margin-left:0.2rem;
+        }
+        .electinput{
+            margin-left:0.3rem;
+            width:5rem;
+            border:none;
+            outline: none;
+            background: rgba(0,0,0,0.1);
+            border-radius: 4px;
+            padding-left:0.6rem;
+        }
+        .location1{
+            position: absolute;
+            font-size: 0.4rem;
+            top:1rem;
+            left:2.3rem;
+            color: lightgrey;
+            padding-right: 0.1rem;
+            font-size: 12px;
+        }
+        .dizhi{
+            margin-left:0.2rem;
+        }
+        .dizhi1{
+            float: right;
+            margin-right:0.2rem;
+        }
+        .elect-box-top2{
+            width:100%;
+            height:2rem;
+            background: white;
+            font-size:14px;
+        }
+        .elect-box-top3{
+            width:100%;
+            height: 0.5rem;
+            margin-bottom:0.2rem;
+        }
+        .home{
+            margin-left: 0.2rem;
+            margin-right:0.2rem;
+        }
+        .my-position{
+            font-size: 12px;
+            color:gray;
+        }
+        .my-position1{
+            font-size:12px;
+            margin-left:0.2rem;
+            margin-bottom:0.1rem;
+        }
+        .my-position2{
+            font-size: 12px;
+            color:gray;
+            margin-left:0.3rem;
+        }
+        .fenjiexian{
+            width:90%;
+            margin:0 auto;
+        }
+        .elect-box-bottom{
+            width:100%;
+            height:12.5rem;
+            background: white;
+            font-size:14px;
+        }
+        .elect-box-bottom1{
+            margin-top:0.2rem;
+        }
+        .elect-box-bottom1 li{
+            width: 90%;
+            height: 1rem;
+            /* background: green; */
+            line-height: 1rem;
+            margin: 0 auto;
+            list-style: none;
+            border-bottom:1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="elect">
+        <div class="elect-box">
+            <!-- 上 -->
+            <div class="elect-box-top">
+                <i class="fa fa-chevron-left  chevron-left"></i>
+                <span class="elect-word">选择收货地址</span>
+                <span class="elect-word1">新增地址</span>
+            </div>
+            <div class="elect-box-top1"> 
+                <i class="fa fa-map-marker location"></i>
+                <span>定位失败</span>
+                <input class='electinput'type="text" placeholder="请输入收货地址">
+                <div class="location1">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="elect-box-top1"> 
+                <span class="dizhi">山西思软智学教育科技有限公司</span>
+                <span class="dizhi1">
+                    <img src="src/image/chongxindingwei.png">
+                    重新定位
+                </span>
+            </div>
+            <div class="elect-box-top2"> 
+                <p class="elect-box-top3">
+                    <i class="fa fa-home home"></i>
+                    <span class="my-position">我的收货地址</span>
+                </p>
+                <p class="my-position1">太原思软智学教育科技有限公司</p>
+                <span class="my-position2">小明</span>
+                <span class="my-position2">男士</span>
+                <span class="my-position2">12345678901</span>
+            </div>
+            <hr class="fenjiexian">
+            <div class="elect-box-bottom"> 
+                <p class="elect-box-top3">
+                    <i class="fa fa-map-marker location"></i>
+                    <span class="my-position">附近地址</span>
+                </p>
+                <ul class="elect-box-bottom1">
+                    <li>星程酒店停车场</li>
+                    <li>米+U天地</li>
+                    <li>星程酒店停车场(出入口)</li>
+                    <li>燕金商务楼(建设中)</li>
+                    <li>榆次区鸣李幼儿园</li>
+                    <li>榆次区鸣李小学</li>
+                    <li>开发区鸣李小学</li>
+                    <li>金苹果幼儿园</li>
+                    <li>晋福佳园13栋</li>
+                    <li>汇通苑</li>
+                    <li>辰远教育</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        //跳回到再来一单界面
+        var Chevronleft=document.querySelector('.chevron-left')
+        Chevronleft.onclick=function(){
+            window.location.href="zailaiyidan.html"
+        }
+    </script>
+</body>
+</html>

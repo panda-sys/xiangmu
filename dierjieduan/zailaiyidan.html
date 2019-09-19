@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/10+'px'</script>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .recur{
+            overflow:hidden; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #f7f7f7;
+        }
+        .recur-top{
+            width:100%;
+            height: 3.5rem;
+            background: #fff;
+            font-size: 18px;
+            line-height: 1rem;
+        }
+        .arrow-left{
+            margin-left:0.2rem;
+            margin-right: 0.1rem;
+            color:lightgray;
+        }
+        .shugang{
+            font-size: 16px;
+            margin-right: 0.1rem;
+            color:lightgray;
+        }
+        .word{
+            font-size:14px;
+            color:#333;
+        }
+        .recur-top-center{
+            width:100%;
+            height: 2.5rem;
+            text-align: center;
+            font-size:12px;
+        }
+        .recur-top-center1{
+            width:100%;
+            height:0.7rem;
+        }
+        .recur-top-center2{
+            width:100%;
+            height:0.5rem;
+            line-height:0.5rem;
+            margin-top:0.2rem;
+        }
+        .look{
+            border:none;
+            background: none;
+            width:2.5rem;
+            background: #FFC300;
+            color:#333;
+            font-size: 12px;
+        }
+        .recur-center{
+            width:100%;
+            height: 1rem;
+            background: #fff;
+            margin-top: 0.2rem;
+            font-size:14px;
+            line-height: 1rem;
+        }
+        .zhixue{
+            margin-left:0.2rem;
+        }
+        .select{
+            float: right;
+            margin-right:0.2rem;
+        }
+        .recur-bottom{
+            width:100%;
+            height: 13rem;
+            margin-top: 0.2rem;
+            background: #fff;
+            font-size: 14px;
+            display:table;
+        }
+        .recur-bottom1{
+            margin-top:4rem;
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="recur">
+        <!-- 上 -->
+        <div class="recur-top">
+            <i class="fa fa-arrow-left arrow-left "></i>
+            <span class="shugang">|</span>
+            <span class="word">美团</span>
+            <div class="recur-top-center">
+                <div class="recur-top-center1">
+                    <img src="src/image/jingshi.png">
+                </div>
+                <div class="recur-top-center2"> 
+                    <span class="site">您的位置太远了,商家配送不到哦</span>
+                </div>
+                <button class="look">查看外卖首页</button>
+            </div>
+        </div>
+        <!-- 中 -->
+        <div class="recur-center">
+            <span class="zhixue">当前:太原思软智学教有限公司</span>
+            <span class="select">选择地址></span>
+        </div>
+        <!-- 下 -->
+        <div class="recur-bottom">
+            <div class="recur-bottom1">
+                <img src="src/image/jishiben.png">
+                <p>抱歉，附近暂无营业商家</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //返回我的订单界面
+        var Look=document.querySelector('.look')
+        Look.onclick=function(){
+            window.location.href="wodedingdan.html"
+        }
+        //返回到订单已完成界面
+        var Arrowleft=document.querySelector('.arrow-left')
+        Arrowleft.onclick=function(){
+            window.location.href="dingdanwancheng.html"
+        }
+        var Select=document.querySelector('.select')
+        Select.onclick=function(){
+            window.location.href="xuanzedizhi.html"
+        }
+    </script>
+</body>
+</html>
