@@ -14,7 +14,7 @@
             padding:0;
         }
         #big-box{
-            overflow:hidden; 
+            /* overflow:hidden;  */
             position: absolute;
             top: 0;
             left: 0;
@@ -137,6 +137,35 @@
         }
         .flex2{
             flex:5;
+        }
+        .bottombox{
+            height: 1.3rem;
+            position: fixed;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            /* border-top: 1px solid red; */
+            background: #FFFFFF; 
+            z-index: 1; 
+            text-align: center;
+        }
+        .bottom div{
+            width:0.8rem;
+            height:0.8rem;
+            /* background: #A67152; */
+            margin:0 auto;
+            text-align: center;
+        }
+        .bottom{
+            flex:1;
+        }
+        .bottom p{
+            font-size:0.28rem;
+            color:black;
+            /* margin-top:0.1rem; */
+        }
+        .bottom img{
+            margin-bottom:1rem;
         }
     </style>
 </head>
@@ -293,6 +322,32 @@
             </div>
         </div>
         <!-- 下 -->
+        <div class="flex bottombox">
+            <div class="bottom first">
+                <div>
+                    <img width="71%" style="margin-top:0.18rem" src="src/image/home-circle-o.png">
+                </div>
+                <p>首页</p>
+            </div>
+            <div class="bottom found">
+                <div>
+                    <img width="88%" style="margin-top:0.18rem"  src="src/image/faxian (1).png">
+                </div>
+                <p>发现</p>
+            </div>
+            <div class="bottom order1">
+                <div>
+                    <img width="70%" style="margin-top:0.18rem" src="src/image/订 单.png">
+                </div>
+                <p>订单</p>
+            </div>
+            <div class="bottom me">
+                <div>
+                    <img width="70%" style="margin-top:0.18rem" src="src/image/wode.png">
+                </div>
+                <p>我的</p>
+            </div>
+        </div>
     </div>
     <script src="js/iscroll.js"></script>
     <script src="js/swiper.js"></script>
@@ -313,6 +368,21 @@
         var Myorder=document.querySelector('.my-order')
         Myorder.onclick=function(){
             window.location.href="dingdanwancheng.html"
+        }
+
+        var first=document.querySelector('.first')
+        first.onclick=function(){
+            window.location.href="first.html"
+        }
+
+        var found=document.querySelector('.found')
+        found.onclick=function(){
+            window.location.href="find.html"
+        }
+
+        var me=document.querySelector('.me')
+        me.onclick=function(){
+            window.location.href="mine.html"
         }
     </script>
 </body>
