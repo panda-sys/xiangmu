@@ -253,14 +253,33 @@
             window.location.href="help.html"
         }
 
-        // 登录
         var login=document.querySelector('.login')
         var tel=document.querySelector('.tel')
         var pwd=document.querySelector('.password')
+
+        // 登录
         login.onclick=function(){
-            window.location.href="first.html"
-            tel.value=''
-            pwd.value=''
+            var arr=document.cookie.split(';')
+            for(var i=0;i<arr.length;i++){
+                arr[i]=arr[i].split('=')
+                arr[i][0]=arr[i][0].trim()
+                if(tel.value== arr[i][0]){
+                    if(arr[i][1]==pwd.value){
+                        alert('登录成功')
+                        document.cookie='loginuser'+'='+ tel.value
+                        location.href='first.html'
+                    }else{
+                        alert('密码错误，请重新输入密码')
+                        pwd.value=''
+                    }
+                    // console.log('注册过')
+                    break;
+                }
+            }
+            if(i==arr.length){
+                alert('没有注册过,请先注册')
+                location.href='register.html'
+            }
         }
     </script>
 </body>
