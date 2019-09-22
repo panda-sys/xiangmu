@@ -621,19 +621,19 @@
             </div>
             <p>首页</p>
         </div>
-        <div class="bottom">
+        <div class="bottom found">
             <div>
                 <img width="88%" style="margin-top:0.16rem" src="src/image/faxian (1).png">
             </div>
             <p>发现</p>
         </div>
-        <div class="bottom">
+        <div class="bottom order">
             <div>
                 <img width="78%" style="margin-top:0.16rem" src="src/image/mas-order-line.png">
             </div>
             <p>订单</p>
         </div>
-        <div class="bottom">
+        <div class="bottom me">
             <div>
                 <img width="75%" style="margin-top:0.16rem" src="src/image/wode.png">
             </div>
@@ -687,6 +687,23 @@
         searchbar.onclick=function(){
             window.location.href='sousuo.html'
         }
+
+
+        var found=document.querySelector('.found')
+        found.onclick=function(){
+            window.location.href='find.html'
+        }
+
+        var order=document.querySelector('.order')
+        order.onclick=function(){
+            window.location.href='wodedingdan.html'
+        }
+
+        var me=document.querySelector('.me')
+        me.onclick=function(){
+            window.location.href='mine.html'
+        }
+
     </script>
 </body>
 </html>
